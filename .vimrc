@@ -63,6 +63,7 @@ set noeol
 set mouse=a
 "Disable bell sounds:
 set noerrorbells
+set belloff=all
 "Don't reset cursor to start of line:
 set nostartofline
 "Show the cursor position:
@@ -106,8 +107,5 @@ set esckeys
 set ttyfast
 "use utf-8 sans BOM
 set encoding=utf-8 nobomb
-
-
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
