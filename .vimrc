@@ -36,12 +36,6 @@ set showmatch
 set hlsearch
 
 """"""""""
-"HISTORY:"
-""""""""""
-"num of cmds in history (defaults 20):
-set history=1000
-
-""""""""""
 "DISPLAY:"
 """"""""""
 "show partial cmds:
@@ -60,6 +54,37 @@ syntax on
 "Cursor corss-hairs:
 "set cursorline
 "set cursorcolumn
+"Don't add empty newlines at end of files:
+set binary
+set noeol
+"Show status line always:
+"set laststatus=2
+"Enable mouse in all modes:
+set mouse=a
+"Disable bell sounds:
+set noerrorbells
+"Don't reset cursor to start of line:
+set nostartofline
+"Show the cursor position:
+set ruler
+"Show mode:
+set showmode
+"show the filename in window title bar:
+set title
+
+"""""""""""""""""""""
+"BACK-UPS & HISTORY:"
+"""""""""""""""""""""
+"num of cmds in history (defaults 20):
+set history=1000
+"Turn off back ups:
+"set nobackup
+"Centralise backups, swapfiles, undo history
+"set backupdir=~/.vim/backups
+"set directory=~/.vim/swaps
+"if exists("&undodir")
+"    set undodir=~/.vim/undo
+"endif
 
 """"""""""""""""""
 "AUTO-COMPLETION:"
@@ -69,5 +94,20 @@ set wildmenu
 "set behaiour a la bash completion
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+"""""""
+"MISC:"
+"""""""
+"turn off backwars compatibility w vi:
+set nocompatible
+"allow cursor keys in insert mode:
+set esckeys
+"optimise for terminal conections:
+set ttyfast
+"use utf-8 sans BOM
+set encoding=utf-8 nobomb
+
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
