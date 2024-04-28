@@ -17,9 +17,9 @@ set autoindent
 "EDITOR SIZE"
 """""""""""""
 "Set max size of editor line:
-set textwidth=100
+set textwidth=0	"0 means no limit.
 "Don't wrap lines:
-"set nowrap
+set nowrap
 
 """"""""""
 "SEARCHS:"
@@ -64,6 +64,7 @@ set mouse=a
 "Disable bell sounds:
 set noerrorbells
 set belloff=all
+set visualbell
 "Don't reset cursor to start of line:
 set nostartofline
 "Show the cursor position:
@@ -72,6 +73,10 @@ set ruler
 set showmode
 "show the filename in window title bar:
 set title
+"disable spell checking:
+set nospell
+"let cursor go anywhere:
+set virtualedit=all
 
 """""""""""""""""""""
 "BACK-UPS & HISTORY:"
@@ -107,5 +112,15 @@ set esckeys
 set ttyfast
 "use utf-8 sans BOM
 set encoding=utf-8 nobomb
+"quicken esc key response?
+set ttimeoutlen=50
+"show hidden characters on
+"set list
+"use os clipboard?
+set clipboard=unnamedplus
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""
+"NOW DO KEY MAPPINGS LOL
+
+
