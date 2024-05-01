@@ -55,8 +55,8 @@ syntax on
 "set cursorline
 "set cursorcolumn
 "Don't add empty newlines at end of files:
-set binary
-set noeol
+"set binary
+"set noeol
 "Show status line always:
 "set laststatus=2
 "Enable mouse in all modes:
@@ -76,7 +76,7 @@ set title
 "disable spell checking:
 set nospell
 "let cursor go anywhere:
-set virtualedit=all
+"set virtualedit=all
 
 """""""""""""""""""""
 "BACK-UPS & HISTORY:"
