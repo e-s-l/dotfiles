@@ -17,7 +17,7 @@ set autoindent
 "EDITOR SIZE"
 """""""""""""
 "Set max size of editor line:
-set textwidth=0	"0 means no limit.
+set textwidth=132	"0 means no limit.
 "Don't wrap lines:
 set nowrap
 
@@ -76,7 +76,7 @@ set title
 "disable spell checking:
 set nospell
 "let cursor go anywhere:
-"set virtualedit=all
+set virtualedit=all
 
 """""""""""""""""""""
 "BACK-UPS & HISTORY:"
@@ -104,7 +104,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 """""""
 "MISC:"
 """""""
-"turn off backwars compatibility w vi:
+"change line endings to unix style (\n) not DOS (\n\r)
+set ff=unix
+"turn off backwards compatibility w vi:
 set nocompatible
 "allow cursor keys in insert mode:
 set esckeys
