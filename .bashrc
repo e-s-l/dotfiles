@@ -30,7 +30,7 @@ shopt -s checkwinsize
 # ~/.bash_aliases, instead of adding them here directly.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    . ~/Documents/Code/dotfiles/.bash_aliases
 fi
 
 
