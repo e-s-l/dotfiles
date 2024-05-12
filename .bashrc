@@ -1,4 +1,5 @@
 #
+# remember to run: source ~/.bashrc
 
 ###########
 # HISTORY #
