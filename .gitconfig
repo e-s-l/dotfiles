@@ -9,6 +9,8 @@
 [core]
     autocrlf =  input
 
+#NOTE: coz u fucked up, will in vim have to run ":set fileformat=unix" to fix the line endings
+
 [fetch]
     prune = true
 
