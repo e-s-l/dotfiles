@@ -7,7 +7,7 @@
 # On Windows set core.autocrlf true
 # Hence:
 [core]
-    autocrlf =  true
+    autocrlf =  input
 
 [fetch]
     prune = true
