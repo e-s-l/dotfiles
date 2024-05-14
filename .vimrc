@@ -105,7 +105,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 "MISC:"
 """""""
 "change line endings to unix style (\n) not DOS (\n\r)
-set ff=unix
+set fileformat=unix
 "turn off backwards compatibility w vi:
 set nocompatible
 "allow cursor keys in insert mode:
