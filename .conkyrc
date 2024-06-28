@@ -32,28 +32,28 @@ conky.config = {
 --
 
 conky.text = [[
-$hr
-${alignc} ${color} ${execi 1 date +"%R %:z"}
-${alignc} ${color} ${execi 1 date +"%d-%m-%Y"}
-${color grey} Day: $color ${execi 14400 date +%j} ${alignr 10} ${color grey} Week: $color ${execi 14400 date +%U}
-$hr
-${alignc} ${color grey} Uptime: $color $uptime
-$hr
-${color grey} / : $color${fs_used /} / ${fs_size /} ${fs_bar 6 /}
-${color grey} ~ : $color${fs_used /home/} / ${fs_size /home/} ${fs_bar 6 /home/}
-$hr
-${alignc} ${color grey} IP_public: $color ${execi 300 dig +short myip.opendns.com @resolver1.opendns.com}
-$hr
-${alignc} Ethernet:
-${color grey} Down: $color ${downspeed enp0s31f6} ${alignr 10} ${color grey} Down_t: $color ${totaldown enp0s31f6}
-${color grey} Up: $color ${upspeed enp0s31f6} ${alignr 10} ${color grey} Up_t: $color ${totalup enp0s31f6}
-${color grey} IP_private: $color ${addrs enp0s31f6}
-$hr
-${alignc} Wireless:
-${color grey} Down: $color ${downspeed wlp1s0} ${alignr 10} ${color grey} Down_t: $color ${totaldown wlp1s0}
-${color grey} Up: $color ${upspeed wlp1s0} ${alignr 10} ${color grey} Up_t: $color ${totalup wlp1s0}
-${color grey} IP_private: $color ${addrs wlp1s0}
-$hr
+  $hr
+  ${alignc} ${color} ${execi 1 date +"%R %:z"}
+  ${alignc} ${color} ${execi 1 date +"%d-%m-%Y"}
+  ${color grey} Day: $color ${execi 14400 date +%j} ${alignr 10} ${color grey} Week: $color ${execi 14400 date +%U}
+  $hr
+  ${alignc} ${color grey} Uptime: $color $uptime
+  $hr
+  ${color grey} / : $color${fs_used /} / ${fs_size /} ${fs_bar 6 /}
+  ${color grey} ~ : $color${fs_used /home/} / ${fs_size /home/} ${fs_bar 6 /home/}
+  $hr
+  ${alignc} ${color grey} IP_public: $color ${execi 300 dig +short myip.opendns.com @resolver1.opendns.com}
+  $hr
+  ${alignc} Ethernet:
+  ${color grey} Down: $color ${downspeed enp0s31f6} ${alignr 10} ${color grey} Down_t: $color ${totaldown enp0s31f6}
+  ${color grey} Up: $color ${upspeed enp0s31f6} ${alignr 10} ${color grey} Up_t: $color ${totalup enp0s31f6}
+  ${color grey} IP_private: $color ${addrs enp0s31f6}
+  $hr
+  ${alignc} Wireless:
+  ${color grey} Down: $color ${downspeed wlp1s0} ${alignr 10} ${color grey} Down_t: $color ${totaldown wlp1s0}
+  ${color grey} Up: $color ${upspeed wlp1s0} ${alignr 10} ${color grey} Up_t: $color ${totalup wlp1s0}
+  ${color grey} IP_private: $color ${addrs wlp1s0}
+  $hr
 ]]
 
 
