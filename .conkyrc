@@ -19,8 +19,13 @@
 
 conky.config = {
     alignment = 'top_left',
-    background = false,
-    border_width = 1,
+    background = true,
+    use_xft = 'true',
+    xftfont = '123:size=10',
+    xftalpha = '0.1',
+    border_width = 2, 
+    border_inner_margin = 2,
+    border_outer_margin =2,
     cpu_avg_samples = 2,
     default_color = 'white',
     default_outline_color = 'white',
@@ -31,7 +36,6 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     extra_newline = false,
-    font = 'DejaVu Sans Mono:size=12',
     gap_x = 60,
     gap_y = 60,
     minimum_height = 5,
@@ -56,7 +60,6 @@ conky.config = {
 }
 
 conky.text = [[
-${color grey}Info:$color ${scroll 32 Conky $conky_version - $sysname $nodename $kernel $machine}
 $hr
 ${color grey}Uptime:$color $uptime
 ${color grey}Frequency (in MHz):$color $freq
