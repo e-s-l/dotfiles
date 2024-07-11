@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.wordWrap": "on",
+    "editor.cursorStyle":"line",
+    "explorer.sortorder": "type",
+    "files.trimFinalNewlines": true
+}
