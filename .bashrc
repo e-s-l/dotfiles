@@ -15,6 +15,12 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+##########
+# PROMPT #
+##########
+
+PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
+#PS1="\$ "
 
 ###############
 # VIEW WINDOW #
