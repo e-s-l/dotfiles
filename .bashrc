@@ -36,8 +36,8 @@ PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
 # Put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/Code/dotfiles/.bash_aliases ]; then
+    . ~/Code/dotfiles/.bash_aliases
 fi
 
 ###

@@ -5,18 +5,24 @@ Run create_links.sh to set-up the symbolic links between the files here and the 
 
 (Next will create install.sh, which will apt-get the programs themselves, then also run the above.) 
 
+#### Note
+
+It would also be good to add links to the cronjobs here...
+
 ### Current programs
 
 So far I have rudimentray configurations estabilished for the following programs:
 
-- vim
-- alacritty
-- bash
-- conky
-- git
-- screen
-- tmux
-- vscode
+- vim (~/.vimrc)
+- alacritty (~/.config/alacritty/alacritty.yml)
+- bash (~/.bashrc)
+- conky (~/.conkyrc)
+- git (~/.gitconfig)
+- screen (~/.screenrc) 
+- tmux (~/.tmux.conf)
+- vscode (~/.config/Code/User/settings.json)
+
+(In brackets, we have the anticipated locations of the user specific configurations.)
 
 ****************
 

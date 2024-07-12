@@ -11,3 +11,5 @@ githubstuff.txt
 *.JPG
 # ignore other hidden things:
 .*
+# ignore back up files
+*.bak
