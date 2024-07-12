@@ -16,6 +16,7 @@ So far I have rudimentray configurations estabilished for the following programs
 - git
 - screen
 - tmux
+- vscode
 
 ****************
 
