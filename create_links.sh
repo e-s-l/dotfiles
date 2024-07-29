@@ -6,11 +6,17 @@ echo "Creating sym-links..."
 
 ln -s $PWD/.vimrc $HOME/.vimrc
 ln -s $PWD/.tmux.conf $HOME/.tmux.conf
-ln -s $PWD/vscode_settings.json $HOME/.config/Code/User/settings.json
+#ln -s $PWD/vscode_settings.json $HOME/.config/Code/User/settings.json
 ln -s $PWD/.screenrc $HOME/.screenrc
-ln -s $PWD/.conkyrc $HOME/.conkyrc
+#ln -s $PWD/.conkyrc $HOME/.conkyrc
 ln -s $PWD/.bashrc $HOME/.bashrc
 ln -s $PWD/.bash_aliases $HOME/.bash_aliases
 ln -s $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 ln -s $PWD/.gitconfig $HOME/.gitconfig
+
+# Seems that the sym links for vscode & conky don't work
+# so let's just copy instead:
+
+cp $PWD/vscode_settings.json $HOME/.config/Code/User/settings.json
+cp $PWD/.conkyrc $HOME/.conkyrc
 

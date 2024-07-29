@@ -1,8 +1,25 @@
 {
-    "liveServer.settings.donotShowInfoMsg": true,
+    //
     "security.workspace.trust.untrustedFiles": "open",
+    //
     "editor.wordWrap": "on",
     "editor.cursorStyle":"line",
-    "explorer.sortorder": "type",
-    "files.trimFinalNewlines": true
+    //
+    "files.trimFinalNewlines": true,
+    //
+    "editor.bracketPairColorization.enabled": true,
+    // WEB DEV STUFF:
+    // Live Server
+    "liveServer.settings.donotShowInfoMsg": true,
+    // Live Sass compiler
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+           // "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false
+    //
 }

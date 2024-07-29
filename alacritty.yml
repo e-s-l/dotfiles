@@ -32,9 +32,9 @@ window:
   # must be non-zero for this to take effect. The number of columns must be at
   # least `2`, while using a value of `0` for columns and lines will fall back
   # to the window manager's recommended size
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 80
+    lines: 24
 
   # Window position (changes require restart)
   #
@@ -428,7 +428,7 @@ cursor:
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -443,6 +443,12 @@ cursor:
 #  program: /bin/bash
 #  args:
 #    - --login
+
+shell:
+  program: /usr/bin/tmux
+  args:
+    - -u # for forced utf-8 encoding
+
 
 # Startup directory
 #
