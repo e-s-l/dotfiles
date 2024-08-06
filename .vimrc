@@ -12,15 +12,17 @@ set softtabstop=4
 set shiftwidth=4
 "Set autoindentation when required:
 set autoindent
-
+"backspace everything:
+set backspace=indent,eol,start
 """""""""""""
 "EDITOR SIZE"
 """""""""""""
 "Set max size of editor line:
-set textwidth=132	"0 means no limit.
+set textwidth=80 "132	"0 means no limit.
 "Don't wrap lines:
 "set nowrap
-
+"Turn on the ruler:
+set ruler
 """"""""""
 "SEARCHS:"
 """"""""""
