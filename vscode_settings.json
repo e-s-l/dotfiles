@@ -2,9 +2,12 @@
     //
     "security.workspace.trust.untrustedFiles": "open",
     //
-    "editor.wordWrap": "on",
+    //"editor.wordWrap": "on",
     "editor.cursorStyle":"line",
     //
+    // end of lines
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
     "files.trimFinalNewlines": true,
     //
     "editor.bracketPairColorization.enabled": true,
@@ -20,6 +23,30 @@
            // "savePathReplacementPairs": null
         }
     ],
-    "liveSassCompile.settings.generateMap": false
-    //
+    "liveSassCompile.settings.generateMap": false,
+     // emmet
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "files.associations": {
+        "*html": "html",
+        "*njk": "html"
+    },
+    "emmet.useInlineCompletions": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact",
+        "vue-html": "html",
+        "vue": "html",
+        "razor": "html",
+        "plaintext": "pug",
+        "django-html": "html"
+    },
+    // Columns and word warp
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 80,
+    "editor.rulers": [80]
 }
+
