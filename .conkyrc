@@ -1,5 +1,16 @@
 --
+-- Very Basic Conky Configuration
 --
+-- Recall that to set conky to start on boot:
+--
+-- write a start_conky.sh script which sleeps 20 seconds before running conky
+-- ' #!/usr/bin/env bash
+-- sleep 20; conky '
+-- then add this to the start-up application
+--
+-- also we are using another bash script in this file to geolocate the ip
+--
+
 
 conky.config = {
   update_interval = 1.0,
