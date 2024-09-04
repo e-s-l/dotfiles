@@ -41,3 +41,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 ###
+
+fortune | cowsay -f hellokitty
+
+###

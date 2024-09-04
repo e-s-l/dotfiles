@@ -1,11 +1,13 @@
 {
+    "workbench.colorTheme": "Default High Contrast Light",
+    "window.titleBarStyle": "custom",
+    "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "files.trimFinalNewlines": true,
     "editor.bracketPairColorization.enabled": true,
-    "liveServer.settings.donotShowInfoMsg": true,
     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",
@@ -36,6 +38,8 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "same",
     "editor.wordWrapColumn": 80,
-    "editor.rulers": [80]
+    "editor.rulers": [
+        80
+    ],
+    "window.commandCenter": false
 }
-
