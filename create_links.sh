@@ -19,12 +19,11 @@ create_symlink $PWD/.screenrc $HOME/.screenrc
 create_symlink $PWD/.bashrc $HOME/.bashrc 
 create_symlink $PWD/.bash_aliases $HOME/.bash_aliases
 create_symlink $PWD/.gitconfig $HOME/.gitconfig 
-create_symlink $PWD/.conkyrc $HOME/.conkyrc
+create_symlink $PWD/conky_configuration/.conkyrc $HOME/.conkyrc
 
 # other config
 create_symlink $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml 
 create_symlink $PWD/vscodium_settings.json $HOME/.config/VSCodium/User/settings.json
-
 
 #########
 # TO DO #

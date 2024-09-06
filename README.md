@@ -1,4 +1,19 @@
 # Dotfiles
+
+## Dependencies:
+
+### Conky
+
+bash script to get IP address.
+
+Note:
+replace this with 1-liner: curl icanhazip.com
+though would be nice to return something nice if fails.
+
+### Alacritty
+
+theme .toml file stored at... 
+
 ## 2024
 
 Run create_links.sh to set-up the symbolic links between the files here and the locations they are looked for in by their programs.
@@ -33,4 +48,3 @@ So far I have rudimentray configurations estabilished for the following programs
 - Then added a bashrc and aliases file, and kept on adding them. 
 - Next need to write a install bash script that copies (or creates symbolic links) all the dot files to the right places.
 - Then get list of apt packages installed (which have corresponding dotfiles). Then use this list create install.sh
-

@@ -41,5 +41,6 @@
     "editor.rulers": [
         80
     ],
-    "window.commandCenter": false
+    "window.commandCenter": false,
+    "problems.visibility": false
 }
