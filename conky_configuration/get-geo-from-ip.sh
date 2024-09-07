@@ -1,4 +1,4 @@
-#!/bin/usr/env bash
+#!/usr/bin/env bash
 
 ###################################
 # quick script to get geolocation
@@ -17,4 +17,3 @@ main(){
 
 ip_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
 main ${ip_address}
-

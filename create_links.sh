@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 #
 # create sym links from the configuration files to the proper locations
 #
