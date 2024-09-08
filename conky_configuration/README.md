@@ -8,5 +8,5 @@
 
 -  add following line to $USER crontabs
 ´´´
-@reboot $HOME/Auto/start-conky.sh
+@reboot $HOME/Auto/start_conky.sh
 ´´´
