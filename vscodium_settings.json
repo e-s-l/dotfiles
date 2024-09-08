@@ -42,5 +42,8 @@
         80
     ],
     "window.commandCenter": false,
-    "problems.visibility": false
+    "problems.visibility": false,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false
 }

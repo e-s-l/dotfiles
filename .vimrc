@@ -6,7 +6,7 @@
 "INDENTATION:"
 """"""""""""""
 "Set tab to pep-8 standard of 4 spaces:
-set expandtab
+"set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
