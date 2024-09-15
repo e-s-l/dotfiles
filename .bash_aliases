@@ -12,7 +12,7 @@ alias grep='grep -i --color=auto'
 
 ### CONTROL ###
 
-alias restart='shutdown -r now'
+alias restart='sudo shutdown -r now'
 
 ### LIST ###
 
