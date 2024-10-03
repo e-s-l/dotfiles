@@ -4,6 +4,7 @@
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
+    "editor.fontFamily": "'Consolas', IBMPlexMono, Hack, 'Courier New', monospace",
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "files.trimFinalNewlines": true,

@@ -29,6 +29,18 @@ PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
 # update LNS & COLS if window changed size:
 #shopt -s checkwinsize
 
+
+#################
+# DEFAULT SHELL #
+#################
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
+	[[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  #exec tmux new -s hello
+  exec tmux
+fi
+
+
 ###############
 # ALIAS DEFNS #
 ###############
@@ -42,6 +54,6 @@ fi
 
 ###
 
-fortune | cowsay -f hellokitty
+fortune | cowsay -f hellokitty; echo; echo;
 
 ###

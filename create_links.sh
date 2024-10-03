@@ -13,6 +13,7 @@ create_symlink() {
 }
 
 # dot files
+create_symlink $PWD/.Xresources $HOME/.Xresources
 create_symlink $PWD/.vimrc $HOME/.vimrc 
 create_symlink $PWD/.tmux.conf $HOME/.tmux.conf 
 create_symlink $PWD/.screenrc $HOME/.screenrc 
