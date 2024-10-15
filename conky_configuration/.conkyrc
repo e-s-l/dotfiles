@@ -34,13 +34,16 @@ conky.config = {
 --
 
 conky.text = [[
-  $hr
-  ${alignc} ${color} ${execi 60 date +"%R %:z"}
-  ${alignc} ${color} ${execi 600 date +"%d-%m-%Y"}
-  ${color grey} Day: $color ${execi 600 date +%j} ${alignr 10} ${color grey} Week: $color ${execi 14400 date +%U}
+  ${alignc} $color ${execi 600 hostname}
   $hr
   ${alignc} ${color grey} Uptime: $color $uptime
   $hr
+  ${alignc} ${color grey} CPU (C0):
+  ${alignc} ${color grey} Usage: ${color} ${cpu cpu0}% ${color grey} Temp: ${color}${execi 60 sensors | grep 'Core 0:' | cut -c15-23}
+  $hr
+  ${alignc} ${color grey} Memory:  ${color}$alignc $mem / $memmax
+  $hr
+  ${alignc} ${color grey} Storage:
   ${alignc} ${color grey} / : $color${fs_used /} / ${fs_size /} 
   ${fs_bar 6 /}
   ${alignc} ${color grey} ~ : $color${fs_used /home/} / ${fs_size /home/} 
@@ -48,11 +51,6 @@ conky.text = [[
   $hr
   ${alignc} ${color grey} IP_public:
   ${alignc} $color ${execi 600 $HOME/Code/dotfiles/conky_configuration/get-geo-from-ip.sh}
-  $hr
-  ${alignc} ${color grey} Hostnames:
-  ${alignc} $color ${execi 600 hostname}
-  ${alignc} $color ${execi 600 hostname -i}
-  ${alignc} $color ${execi 600 hostname -I}
   $hr
   ${alignc} ${color grey} Ethernet:
   ${color grey} Down: $color ${downspeed enp0s31f6} ${alignr 10} ${color grey} Down_t: $color ${totaldown enp0s31f6}
@@ -67,10 +65,11 @@ conky.text = [[
   ${alignc} ${color grey} WX
   ${alignc} $color ${execi 600 curl wttr.in/Hobart?format="%l:+%t\n"}
   ${alignc} $color ${execi 600 curl wttr.in/Ny-Ålesund?format="%l:+%t\n"}
-  ${alignc} $color ${execi 600 curl wttr.in/?format="%l:+%t\n"}
+  $hr
+  ${alignc} ${color grey} Day: $color ${execi 600 date +%j}
+  ${alignc} ${color grey} Week: $color ${execi 14400 date +%U}
+  $hr
+  ${alignc} ${color} ${execi 600 date +"%d-%m-%Y"}
+  ${alignc} ${color} ${execi 60 date +"%R %:z"}
   $hr
 ]]
-
--- ${texeci 1800 curl wttr.in/kyiv_0pq_lang=uk.png
---   | convert - -transparent black $HOME/.config/conky/out.png}
--- ${image $HOME/.config/conky/out.png -p 0,0}

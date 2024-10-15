@@ -1,7 +1,8 @@
 ### COLOUR ###
 
-alias ls='ls -al --color=auto'
-#alias dir='dir --color=auto'
+alias ls='ls -a --color=auto'
+#alias ls='ls -al --color=auto'
+alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
 alias grep='grep -i --color=auto'
@@ -24,3 +25,7 @@ alias restart='sudo shutdown -r now'
 
 alias dmesg='sudo dmesg -w' 
 
+### SSH ###
+
+# VM
+alias ssh-vm="ssh 192.168.122.147 -l p34121"

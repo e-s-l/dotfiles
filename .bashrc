@@ -54,6 +54,6 @@ fi
 
 ###
 
-fortune | cowsay -f hellokitty; echo; echo;
+# fortune | cowsay -f hellokitty; echo; echo;
 
 ###
