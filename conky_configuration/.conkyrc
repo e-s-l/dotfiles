@@ -68,7 +68,6 @@ conky.text = [[
   $hr
   ${alignc} ${color grey} Day: $color ${execi 600 date +%j}
   ${alignc} ${color grey} Week: $color ${execi 14400 date +%U}
-  $hr
   ${alignc} ${color} ${execi 600 date +"%d-%m-%Y"}
   ${alignc} ${color} ${execi 60 date +"%R %:z"}
   $hr
