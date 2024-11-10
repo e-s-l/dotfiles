@@ -121,7 +121,7 @@ set ttimeoutlen=50
 "show hidden characters on
 "set list
 "use os clipboard?
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 
 """"""""""""""""""""""""""""""""""""""

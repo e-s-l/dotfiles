@@ -1,6 +1,5 @@
 {
     "workbench.colorTheme": "Default High Contrast Light",
-    "window.titleBarStyle": "custom",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
@@ -46,5 +45,5 @@
     "problems.visibility": false,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 4,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": true
 }
