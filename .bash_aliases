@@ -8,16 +8,19 @@ alias dir='dir --color=auto'
 alias grep='grep -i --color=auto'
 # i for case insensitive
 
+# i for interactive mode of copy (extra checks)
+#alias cp='cp -iv'
+alias cp='cp -nrv' 
+# no-overwirte, recursive, verbose
 
-
+# similiar proctection for move (b is for back up)
+#alias mv='mv -ib'
 
 #alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-
+# Colour:
 alias ip='ip -c'
-
-
 
 ### CONTROL ###
 

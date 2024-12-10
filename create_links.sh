@@ -27,11 +27,15 @@ create_symlink $PWD/conky_configuration/.conkyrc $HOME/.conkyrc
 create_symlink $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml 
 create_symlink $PWD/vscodium_settings.json $HOME/.config/VSCodium/User/settings.json
 
+# do we want nvim and vim to share a config file? if so
+#create_link $PWD/.vimrc $HOME/.config/nvim/init.vim
+
 # Note: 
 # For windows, we also use these last two.
 # Their locations are:
 # %appdata%\Roaming\alacritty\alacritty.toml
 # %appdata%\Roaming\Code\User\settings.json
+# %home%\.wezterm.lua
 
 #########
 # TO DO #
