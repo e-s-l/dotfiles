@@ -1,0 +1,15 @@
+# ignore folder of test images:
+misc-imgs
+# ignore rando git reminder file:
+githubstuff.txt
+# ignore other text files:
+*.txt
+# ignore all image files:
+*.jpg
+*.png
+*.jpeg
+*.JPG
+# ignore other hidden things:
+#.*
+# ignore back up files
+*.bak
