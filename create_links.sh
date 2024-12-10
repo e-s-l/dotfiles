@@ -22,6 +22,9 @@ create_symlink $PWD/.bashrc $HOME/.bashrc
 create_symlink $PWD/.bash_aliases $HOME/.bash_aliases
 create_symlink $PWD/.gitconfig $HOME/.gitconfig 
 create_symlink $PWD/conky_configuration/.conkyrc $HOME/.conkyrc
+create_symlink $PWD/rofi/config.rasi $HOME/.config/rofi/config.rasi
+create_symlink $PWD/rofi/theme.rasi $HOME/.config/rofi/theme.rasi
+
 
 # other config
 create_symlink $PWD/alacritty.yml $HOME/.config/alacritty/alacritty.yml 
