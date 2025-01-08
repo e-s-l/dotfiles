@@ -45,5 +45,11 @@
     "problems.visibility": false,
     "editor.renderWhitespace": "all",
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+	"editor.smoothScrolling": true,
+	"editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"workbench.list.smoothScrolling": true,
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.cursorBlinking": true
 }
