@@ -52,6 +52,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_work_aliases ]; then
+	. ~/.bash_work_aliases
+fi
+
 ###
 
 # fortune | cowsay -f hellokitty; echo; echo;
