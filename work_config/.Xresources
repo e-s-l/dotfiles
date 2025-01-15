@@ -3,73 +3,77 @@
 !! xrdb ~/.Xresources
 !!
 
-!! Colorscheme
-
 ! Special
-URxvt.foreground:   #E5A1F1
-URxvt.background:   [88]#2E3440
-URxvt.cursorColor:  #E5E5F0
+URxvt.foreground: #D3D7CF
+URxvt.background: [95]#1C1C1C
+URxvt.cursorColor: #D3D7CF
 
 ! black
-URxvt.color0: #2E3440
-URxvt.color8: #4C566A
+URxvt.color0: #2E3436
+URxvt.color8: #555753
 
 ! red
-URxvt.color1: #D12F2C
-URxvt.color9: #88C0D0
+URxvt.color1: #CC0000
+URxvt.color9: #EF2929
 
 ! green
-URxvt.color2:  #BF616A
-URxvt.color10: #819400
+URxvt.color2: #5BA084
+URxvt.color10: #8FD3B4
 
 ! yellow
-URxvt.color3:  #5E81AC
-URxvt.color11: #D9A400
+URxvt.color3: #C4A000
+URxvt.color11: #FCE94F
 
 ! blue
-URxvt.color4:  #2587CC
-URxvt.color12: #EBCB8B
+URxvt.color4: #3465A4
+URxvt.color12: #729FCF
 
 ! magenta
-URxvt.color5:  #A3BE8C
-URxvt.color13: #696EBF
+URxvt.color5: #75507B
+URxvt.color13: #AD7FA8
 
 ! cyan
-URxvt.color6:  #33C5BA
-URxvt.color14: #D08770
+URxvt.color6: #06989A
+URxvt.color14: #34E2E2
 
 ! white
-URxvt.color7:  #E5E9F0
-! URxvt.color15: #8FBCBB
-URxvt.color15: #8FBBBB
+URxvt.color7: #D3D7CF
+URxvt.color15: #EEEEEC
 
-!! URxvt Appearance
+! Font
 
 URxvt.font: \
  xft: Inconsolata:size=10:style=Regular:spacing=Mono:minspace=False:antialias=true, \
   xft: IBMPlexMono-Regular:size=10:spacing=Mono:minspace=False:antialias=true, \
     xft: Hack-Regular:size=10:spacing=Mono:minspace=False:antialias=true
 
-URxvt.letterSpace: 0
-URxvt.lineSpace: 0
+!URxvt.lineSpace: 1
+URxvt.letterSpace: 1
 
-URxvt.geometry: 100x30
-URxvt.internalBorder: 12
+! Geometry
+URxvt.geometry: 80x24
+URxvt.internalBorder: 8
 
+! Cursor behavior
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
-URxvt.saveline: 2048
 
+! Scrollback buffer
+URxvt.saveline: 4096
+
+! Transparency
+!URxvt*transparent: true
+URxvt*shading: 20
+
+! Blur effect
+URxvt*blurRadius: 3
+
+! Disable scrollbar
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 
-URxvt.urgentOnBell: true
+! Urgency behavior
+!URxvt.urgentOnBell: true
 
-!URxvt.depth: 24
-URxvt*depth: 32
-
-URxvt.iso14755: false
-
-!URxvt*transparent: true
-URxvt*shading: 30
-URxvt*blurRadius: 3
+! Color depth
+URxvt*depth: 32s

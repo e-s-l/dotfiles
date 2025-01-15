@@ -9,8 +9,8 @@ alias grep='grep -i --color=auto'
 # i for case insensitive
 
 # i for interactive mode of copy (extra checks)
-#alias cp='cp -iv'
-alias cp='cp -nrv' 
+alias cp='cp -irv'
+#alias cp='cp -nrv' 
 # no-overwirte, recursive, verbose
 
 # similiar proctection for move (b is for back up)
