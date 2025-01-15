@@ -58,26 +58,6 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# Uncomment for a colored prompt, if the terminal has the capability.
-force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support.
-        color_prompt=yes
-    else
-        color_prompt=
-    fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\w\$ '
-fi
-
-unset color_prompt force_color_prompt
-
 # If this is an xterm, set the title to user@host:dir.
 case "$TERM" in
 xterm*|rxvt*)
@@ -117,10 +97,45 @@ fi
 # TMUX AUTO START
 ###########################
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
-   [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux
-fi
+
+case "$TERM" in
+    rxvt-unicode-256color | screen-256color)
+
+        # Uncomment for a colored prompt, if the terminal has the capability.
+        force_color_prompt=yes
+
+        if [ -n "$force_color_prompt" ]; then
+            if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+                # We have color support.
+                color_prompt=yes
+            else
+                color_prompt=
+            fi
+        fi
+
+        if [ "$color_prompt" = yes ]; then
+            PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\w\[\033[00m\]\$ '
+        else
+            PS1='${debian_chroot:+($debian_chroot)}\w\$ '
+        fi
+
+
+        if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+          exec tmux
+        fi
+
+        unset color_prompt force_color_prompt
+
+
+        ;;
+    xterm-256color)
+        # No tmux startup in XFCE Terminal (or similar terminals)
+        ;;
+    *)
+        # For other terminal types, don't start tmux
+        ;;
+esac
+
 
 ####################
 # COMPLETION
