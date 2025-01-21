@@ -1,0 +1,14 @@
+# Taken from 
+# https://www.paolomainardi.com/posts/macos-apps-shortcuts-skhd/
+
+# Inspirations
+# https://gist.github.com/armand1m/4094b37d8969fd365fdcc215277e9e67
+# https://git.arul.io/arul/dotfiles/src/branch/macOS/skhd/.config/skhd/skhdrc
+
+
+# Open iterm2.
+
+# cmd - shift - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
+
+cmd + shift - t : open -na "iTerm"
+

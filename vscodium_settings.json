@@ -44,6 +44,13 @@
     "window.commandCenter": false,
     "problems.visibility": false,
     "editor.renderWhitespace": "all",
+    "editor.insertSpaces": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.cursorBlinking": true
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "explorer.confirmDragAndDrop": false
