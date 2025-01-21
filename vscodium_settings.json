@@ -24,6 +24,7 @@
     "files.associations": {
         "*html": "html",
         "*njk": "html"
+        "*php": "php"
     },
     "emmet.useInlineCompletions": true,
     "emmet.includeLanguages": {
@@ -31,9 +32,8 @@
         "typescript": "typescriptreact",
         "vue-html": "html",
         "vue": "html",
-        "razor": "html",
-        "plaintext": "pug",
-        "django-html": "html"
+        "django-html": "html",
+        "php": "html"
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "same",
@@ -44,7 +44,6 @@
     "window.commandCenter": false,
     "problems.visibility": false,
     "editor.renderWhitespace": "all",
-    "editor.tabSize": 4,
     "editor.insertSpaces": true,
 	"editor.smoothScrolling": true,
 	"editor.cursorBlinking": "smooth",
@@ -52,4 +51,7 @@
 	"workbench.list.smoothScrolling": true,
 	"terminal.integrated.smoothScrolling": true,
 	"terminal.integrated.cursorBlinking": true
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "explorer.confirmDragAndDrop": false
 }

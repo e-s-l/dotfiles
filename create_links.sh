@@ -47,4 +47,5 @@ create_symlink $PWD/vscodium_settings.json $HOME/.config/VSCodium/User/settings.
 # - test conky as symlink again 
 # - check for those that have directories that they exist 
 # - and warn 'perhaps not installed'
-#
+# - add options to install basic config (bash, tmux, x) from different
+# directories (work, home...)
