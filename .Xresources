@@ -46,9 +46,9 @@ URxvt.color15: #8FBBBB
 !! URxvt Appearance
 
 URxvt.font: \
- xft: Inconsolata:size=10:style=Regular:spacing=Mono:minspace=False:antialias=true, \
-  xft: IBMPlexMono-Regular:size=10:spacing=Mono:minspace=False:antialias=true, \
-    xft: Hack-Regular:size=10:spacing=Mono:minspace=False:antialias=true
+ xft: Inconsolata:size=12:style=Regular:spacing=Mono:minspace=False:antialias=true, \
+  xft: IBMPlexMono-Regular:size=12:spacing=Mono:minspace=False:antialias=true, \
+    xft: Hack-Regular:size=12:spacing=Mono:minspace=False:antialias=true
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
