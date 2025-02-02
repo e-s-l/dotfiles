@@ -1,0 +1,15 @@
+# ignore other text files:
+**.txt
+
+# ignore all image files:
+**.jpg
+**.png
+**.jpeg
+**.JPG
+
+# ignore back up files
+**.bak
+
+# ignore machine-specific files
+**.local/
+**.cache/

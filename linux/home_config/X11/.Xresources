@@ -1,0 +1,75 @@
+!!
+!! Affect changes:
+!! xrdb ~/.Xresources
+!!
+
+!! Colorscheme
+
+! Special
+URxvt.foreground:   #E5A1F1
+URxvt.background:   [88]#2E3440
+URxvt.cursorColor:  #E5E5F0
+
+! black
+URxvt.color0: #2E3440
+URxvt.color8: #4C566A
+
+! red
+URxvt.color1: #D12F2C
+URxvt.color9: #88C0D0
+
+! green
+URxvt.color2:  #BF616A
+URxvt.color10: #819400
+
+! yellow
+URxvt.color3:  #5E81AC
+URxvt.color11: #D9A400
+
+! blue
+URxvt.color4:  #2587CC
+URxvt.color12: #EBCB8B
+
+! magenta
+URxvt.color5:  #A3BE8C
+URxvt.color13: #696EBF
+
+! cyan
+URxvt.color6:  #33C5BA
+URxvt.color14: #D08770
+
+! white
+URxvt.color7:  #E5E9F0
+! URxvt.color15: #8FBCBB
+URxvt.color15: #8FBBBB
+
+!! URxvt Appearance
+
+URxvt.font: \
+ xft: Inconsolata:size=12:style=Regular:spacing=Mono:minspace=False:antialias=true, \
+  xft: IBMPlexMono-Regular:size=12:spacing=Mono:minspace=False:antialias=true, \
+    xft: Hack-Regular:size=12:spacing=Mono:minspace=False:antialias=true
+
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+
+URxvt.geometry: 100x30
+URxvt.internalBorder: 12
+
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+
+URxvt.urgentOnBell: true
+
+!URxvt.depth: 24
+URxvt*depth: 32
+
+URxvt.iso14755: false
+
+!URxvt*transparent: true
+URxvt*shading: 30
+URxvt*blurRadius: 3

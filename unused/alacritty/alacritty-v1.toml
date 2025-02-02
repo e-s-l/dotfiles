@@ -1,0 +1,70 @@
+import = ["./dracula.toml"]
+live_config_reload = true
+
+[colors]
+animation = "EaseOutExpo"
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#666666"
+blue = "#7aa6da"
+cyan = "#70c0b1"
+green = "#b9ca4a"
+magenta = "#c397d8"
+red = "#d54e53"
+white = "#eaeaea"
+yellow = "#e7c547"
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#8abeb7"
+green = "#b5bd68"
+magenta = "#b294bb"
+red = "#cc6666"
+white = "#c5c8c6"
+yellow = "#f0c674"
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[cursor.style]
+blinking = "Always"
+shape = "Underline"
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Italic"
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+
+[shell]
+args = ["-u"]
+program = "/usr/bin/tmux"
+
+[window]
+decorations = "none"
+history = 50000
+multiplier = 3
+opacity = 0.9
+
+[window.dimensions]
+columns = 80
+lines = 24
+
+[window.padding]
+x = 15
+y = 10
