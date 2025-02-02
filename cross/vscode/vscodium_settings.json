@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default High Contrast Light",
+    "workbench.colorTheme": "Default High Contrast Dark",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
@@ -50,7 +50,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
-    "terminal.integrated.cursorBlinking": true",
-	"editor.tabSize": 2,
+    "terminal.integrated.cursorBlinking": true,
+    "editor.tabSize": 2,
     "explorer.confirmDragAndDrop": false
 }

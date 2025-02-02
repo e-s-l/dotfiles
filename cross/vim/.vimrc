@@ -19,7 +19,10 @@ set backspace=indent,eol,start
 "EDITOR SIZE"
 """""""""""""
 "Set max size of editor line:
-set textwidth=80 "132	"0 means no limit.
+set textwidth=80 
+"132
+"Note: 0 means no limit.
+"""
 "Don't wrap lines:
 "set nowrap
 "Turn on the ruler:
