@@ -23,7 +23,7 @@
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "files.associations": {
         "*html": "html",
-        "*njk": "html"
+        "*njk": "html",
         "*php": "php"
     },
     "emmet.useInlineCompletions": true,
@@ -50,8 +50,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
-    "terminal.integrated.cursorBlinking": true
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
+    "terminal.integrated.cursorBlinking": true",
+	"editor.tabSize": 2,
     "explorer.confirmDragAndDrop": false
 }
