@@ -1,6 +1,15 @@
 # Dotfiles
 
+## OSX SPECIFIC SET-UP
+
+Copy of these subdirectories in  ~/.config/
+
 ## Dependencies:
+
+### WEZTERM
+
+brew search --cask nerd
+brew install --cask font-jetbrains-mono-nerd-font
 
 ### Conky
 
