@@ -48,11 +48,11 @@ fi
 # Put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 
-if [ -f ~/.bash_aliases ]; then
+if [ -f ~/.aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_work_aliases ]; then
+if [ -f ~/.aliases_work ]; then
 	. ~/.bash_work_aliases
 fi
 

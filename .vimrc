@@ -14,6 +14,7 @@ set shiftwidth=4
 set autoindent
 "backspace everything:
 set backspace=indent,eol,start
+
 """""""""""""
 "EDITOR SIZE"
 """""""""""""
@@ -23,6 +24,7 @@ set textwidth=80 "132	"0 means no limit.
 "set nowrap
 "Turn on the ruler:
 set ruler
+
 """"""""""
 "SEARCHS:"
 """"""""""
@@ -122,9 +124,8 @@ set ttimeoutlen=50
 "set list
 "use os clipboard?
 set clipboard+=unnamedplus
-
+" show line numbers
+set number
 
 """"""""""""""""""""""""""""""""""""""
 "NOW DO KEY MAPPINGS LOL
-
-

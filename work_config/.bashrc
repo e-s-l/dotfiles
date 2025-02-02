@@ -85,18 +85,17 @@ fi
 #######################
 
 # Add all user-defined aliases from separate files.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
-if [ -f ~/.bash_work_aliases ]; then
-    . ~/.bash_work_aliases
+if [ -f ~/.aliases_work ]; then
+    . ~/.aliases_work
 fi
 
 ###########################
 # TMUX AUTO START
 ###########################
-
 
 case "$TERM" in
     rxvt-unicode-256color | screen-256color)
