@@ -116,7 +116,8 @@ set ff=unix
 "turn off backwards compatibility w vi:
 set nocompatible
 "allow cursor keys in insert mode:
-set esckeys
+" set esckeys
+" the above is vim only
 "optimise for terminal conections:
 set ttyfast
 "use utf-8 sans BOM

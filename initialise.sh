@@ -4,11 +4,11 @@
 # lil utility to check the paths aren't already there...
 # then make the path if needed & then link.
 create() {
-    if [ -e $2 ] || [ -L $2 ]; then
+    if [ -e "$2" ] || [ -L "$2" ]; then
         echo "Skipping $2, already exists."
     else
         mkdir -p $(dirname "$2")
-        ln -s $1 $2 || { echo "Failed to create symlink: $2"; exit 1; }
+        ln -s "$1" "$2" || { echo "Failed to create symlink: $2"; exit 1; }
         echo "Created symlink: $2 -> $1"
     fi
 }
@@ -23,27 +23,36 @@ ALLSHELLS="$ALL/shell"
 create $ALLSHELLS/.profile $HOME/.profile 
 create $ALLSHELLS/.aliases $HOME/.aliases
 create $ALL/git/.gitconfig $HOME/.gitconfig
-create $PWD/vim/.vimrc $HOME/.vimrc 
 
 # vscode/vscodium
 VSCODE="VSCodium"
-create $PWD/vscode/vscodium_settings.json $HOME/.config/$VSCODE/User/settings.json
+
 
 # platform-specific
 echo "OSTYPE is #$OSTYPE..."
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
     ##########
-    MACSHELL="$PWD/mac/shell"
+    MAC="$PWD/mac"
+    MACSHELL="$MAC/shell"
+    MACCONF="$MAC/.config"
     ##########
 
     # shell profile and runcontrol
     create $MACSHELL/.zprofile $HOME/.zprofile
     create $MACSHELL/.zshrc $HOME/.zshrc
-    # wezterm
-    create $PWD/mac/terminal/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
     # skhd
-    create $PWD/mac/skhd/skhdrc $HOME/.config/skhd/skhdrc
+    create $MACCONF/skhd/skhdrc $HOME/.config/skhd/skhdrc
+    # vscode
+    create $ALL/vscode/vscodium_settings.json "$HOME/Library/Application Support/VSCodium/User/settings.json"
+    # wezterm
+    create $ALL/terminal/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
+    # neovim
+    create $ALL/vim/.vimrc $HOME/.config/nvim/init.vim
+    # sketchybar
+    create $MACCONF/sketchybar/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+    # hmmm
+    cp -r $MACCONF/sketchybar/plugins $HOME/.config/sketchybar/
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
@@ -70,6 +79,10 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # app selector
     create $LINUX/rofi/config.rasi $HOME/.config/rofi/config.rasi
     create $LINUX/rofi/theme.rasi $HOME/.config/rofi/theme.rasi
+    # vscode
+    create $ALL/vscode/vscodium_settings.json $HOME/.config/$VSCODE/User/settings.json
+    # vim
+    create $ALL/vim/.vimrc $HOME/.vimrc 
 
 fi
 

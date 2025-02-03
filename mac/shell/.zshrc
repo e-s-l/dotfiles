@@ -5,4 +5,4 @@
 # PROMPT #
 ##########
 
-PROMPT=":%F{blue}%~%f\$ "
+PROMPT="%F{blue}%~%f\$ "
