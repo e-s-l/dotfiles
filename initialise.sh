@@ -22,15 +22,12 @@ ALLSHELLS="$ALL/shell"
 # cross-platform
 
 # shell
-
 create $ALLSHELLS/.profile $HOME/.profile 
 create $ALLSHELLS/.aliases $HOME/.aliases
 create $ALL/git/.gitconfig $HOME/.gitconfig
 
-# terminal
-
+# wezterm
 create $ALL/terminal/wezterm/wezterm.lua $HOME/.wezterm.lua
-
 
 # vscode/vscodium
 VSCODE="VSCodium"
@@ -54,8 +51,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     create $MACCONF/skhd/skhdrc $HOME/.config/skhd/skhdrc
     # vscode
     create $ALL/vscode/vscodium_settings.json "$HOME/Library/Application Support/VSCodium/User/settings.json"
-    # wezterm
-    create $ALL/terminal/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
     # neovim
     create $ALL/vim/.vimrc $HOME/.config/nvim/init.vim
     # sketchybar
