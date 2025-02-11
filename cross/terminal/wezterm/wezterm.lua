@@ -66,15 +66,9 @@ if (wezterm.target_triple == 'x86_64-apple-darwin' or wezterm.target_triple == '
   -- mac
   config.native_macos_fullscreen_mode = false
 
-	--config.window_decorations = 'MACOS_FORCE_SQUARE_CORNERS'
+  config.window_decorations = 'MACOS_FORCE_SQUARE_CORNERS'
 
 end
-
----
------ test
----
-
-
 
 
 return config
