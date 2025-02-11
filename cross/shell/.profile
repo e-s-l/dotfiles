@@ -58,11 +58,20 @@ add_to_path() {
 add_to_path "$HOME/bin" # includes user's bin if it exists
 add_to_path "$HOME/.local/bin"  # includes user's private bin if it exists
 
+
 # os-specfic path additions
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
+	# bins
     add_to_path "/opt/local/bin"
     add_to_path "/opt/local/sbin"
+	add_to_path "/usr/local/bin"
+	add_to_path "/usr/local/sbin"
+
+	# apps
+	add_to_path "/Applications/PyCharm.app/Contents/MacOS"
+	add_to_path "/Applications/WezTerm.app/Contents/MacOS"
+
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 

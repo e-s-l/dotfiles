@@ -21,7 +21,7 @@ alias egrep='egrep --color=auto'
 
 # Colour:
 alias ip='ip -c'
-
+alias minicom='minicom -con'
 ### CONTROL ###
 
 alias restart='sudo shutdown -r now'

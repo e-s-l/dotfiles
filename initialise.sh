@@ -20,13 +20,22 @@ ALL="$PWD/cross"
 ALLSHELLS="$ALL/shell"
 
 # cross-platform
+
+# shell
+
 create $ALLSHELLS/.profile $HOME/.profile 
 create $ALLSHELLS/.aliases $HOME/.aliases
 create $ALL/git/.gitconfig $HOME/.gitconfig
 
+# terminal
+
+create $ALL/terminal/wezterm/wezterm.lua $HOME/.wezterm.lua
+
+
 # vscode/vscodium
 VSCODE="VSCodium"
 
+###############
 
 # platform-specific
 echo "OSTYPE is #$OSTYPE..."
