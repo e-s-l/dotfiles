@@ -77,7 +77,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # hot-key daemon
     create $LINUX/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
     # terminal multiplexer
-    create $LINX/.tmux.conf $HOME/.tmux.conf 
+    create $LINUXCONF/tmux/.tmux.conf $HOME/.tmux.conf 
     # HUD
     create $LINUX/conky/.conkyrc $HOME/.conkyrc
     # app selector
@@ -86,7 +86,9 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # vscode
     create $ALL/vscode/vscodium_settings.json $HOME/.config/$VSCODE/User/settings.json
     # vim
-    create $ALL/vim/.vimrc $HOME/.vimrc 
+    create $ALL/vim/.vimrc $HOME/.vimrc
+    # neovim
+    create $ALL/vim/.vimrc $HOME/.config/nvim/init.vim
 
 fi
 

@@ -7,6 +7,7 @@ elif [ -n "$ZSH_VERSION" ]; then
     SHELL_TYPE="zsh"
 fi
 
+#echo $SHELL_TYPE
 
 ###########
 # HISTORY #
@@ -81,18 +82,20 @@ fi
 
 #############################
 
+# FOOL THE BELOW LEADS TO AN INFIINITE LOOP
+
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
+#if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+#    if [ -f "$HOME/.bashrc" ]; then
+#	. "$HOME/.bashrc"
+#    fi
+#fi
 
 #############################
 
-if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
-elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
-    . "$HOME/.zshrc"
-fi
+#if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
+#    . "$HOME/.bashrc"
+#elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
+#    . "$HOME/.zshrc"
+#fi

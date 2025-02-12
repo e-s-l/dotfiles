@@ -57,22 +57,28 @@ config.automatically_reload_config = true
 -- OS specific configs
 ----------------------
 
-if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-  -- windows
-  config.default_prog = { "pwsh.exe" }
-end
-
+-- mac
 if (wezterm.target_triple == 'x86_64-apple-darwin' or wezterm.target_triple == 'arch64-apple-darwin') then
-  -- mac
-  config.native_macos_fullscreen_mode = false
 
-	--config.window_decorations = 'MACOS_FORCE_SQUARE_CORNERS'
+  config.native_macos_fullscreen_mode = false
+  config.window_decorations = 'MACOS_FORCE_SQUARE_CORNERS'
+
+else
+
+  config.window_decorations = "NONE"
+
+  -- windows
+  if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    config.default_prog = { "pwsh.exe" }
+  end
+
+  -- linux
+  if (wezterm.target_triple == "x86_64-unknown-linux-gnu") then
+    -- hmmmm
+  end
+
 
 end
-
----
------ test
----
 
 
 
