@@ -59,6 +59,8 @@ add_to_path() {
 add_to_path "$HOME/bin" # includes user's bin if it exists
 add_to_path "$HOME/.local/bin"  # includes user's private bin if it exists
 
+# also is it alirght to had the sbins for sudo programs
+# id -u == 0 (see /etc/profile)
 
 # os-specfic path additions
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -83,19 +85,10 @@ fi
 #############################
 
 # FOOL THE BELOW LEADS TO AN INFIINITE LOOP
+# if you include loading the profile in the bash run control...
 
-# if running bash
-#if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-#    if [ -f "$HOME/.bashrc" ]; then
-#	. "$HOME/.bashrc"
-#    fi
-#fi
-
-#############################
-
-#if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
-#    . "$HOME/.bashrc"
-#elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
-#    . "$HOME/.zshrc"
-#fi
+if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
+    . "$HOME/.zshrc"
+fi

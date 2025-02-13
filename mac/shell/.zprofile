@@ -6,9 +6,9 @@
 ###########
 
 # Source .profile for shared settings
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
+#if [ -f ~/.profile ]; then
+#    . ~/.profile
+#fi
 
 #################
 # BREW SETTINGS #

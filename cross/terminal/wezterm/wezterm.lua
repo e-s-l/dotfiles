@@ -9,7 +9,7 @@ local function color_scheme_for_appearance(appearance)
   if appearance:find "Dark" then
     return "Japanesque"
   else
-    return "Tokyo Night Light (Gogh)"
+    return "Japanesque"-- "Tokyo Night Light (Gogh)"
   end
 end
 
@@ -27,31 +27,59 @@ local wezterm = require 'wezterm'
 -- Config
 ---------
 
+config.automatically_reload_config = true
+
+-- Misc.
+
 config.pane_focus_follows_mouse = true
 
--- config.font = wezterm.font 'JetBrainsMono Nerd Font'
+-- Font
+
+local primary_font = 'Inconsolata'
+local secondary_font = 'JetBrainsMono Nerd Font'
 
 config.font = wezterm.font_with_fallback {
-	'Inconsolata',
-	'JetBrainsMono Nerd Font',
+  primary_font,
+  secondary_font,
 }
-
+-- config.font = wezterm.font 'JetBrainsMono Nerd Font'
 
 config.font_size = 12.0
 
---
-config.color_scheme = color_scheme_for_appearance(wezterm.gui.get_appearance())
 
---
-config.window_decorations = "RESIZE"
-
--- "INTEGRATED_BUTTONS"
---"RESIZE"
---config.window_decorations = "NONE"
+-- Tabbar
 
 config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = true
 
-config.automatically_reload_config = true
+
+-- Doesn't want to work...
+--config.window_frame = {
+--  font = wezterm.font secondary_font,
+--  font_size = 12,
+--}
+
+-- Padding
+
+config.window_padding = {
+  left = '2cell',
+  right = '2cell',
+  top = '1cell',
+  bottom = '1cell',
+}
+
+-- Cursor
+
+config.cursor_blink_rate = 500
+config.cursor_blink_ease_in = "Linear"
+
+-- Colours
+
+config.color_scheme = color_scheme_for_appearance(wezterm.gui.get_appearance())
+
+-- Bells
+
+----
 
 ----------------------
 -- OS specific configs
@@ -66,6 +94,7 @@ if (wezterm.target_triple == 'x86_64-apple-darwin' or wezterm.target_triple == '
 else
 
   config.window_decorations = "NONE"
+  -- "RESIZE" --"INTEGRATED_BUTTONS"
 
   -- windows
   if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
@@ -79,8 +108,5 @@ else
 
 
 end
-
-
-
 
 return config
