@@ -63,22 +63,32 @@ add_to_path "$HOME/.local/bin"  # includes user's private bin if it exists
 # os-specfic path additions
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
-	# bins
+    # bins
     add_to_path "/opt/local/bin"
     add_to_path "/opt/local/sbin"
-	add_to_path "/usr/local/bin"
-	add_to_path "/usr/local/sbin"
+    add_to_path "/usr/local/bin"
+    add_to_path "/usr/local/sbin"
 
-	# apps
-	add_to_path "/Applications/PyCharm.app/Contents/MacOS"
-	add_to_path "/Applications/WezTerm.app/Contents/MacOS"
+    # apps
+    add_to_path "/Applications/PyCharm.app/Contents/MacOS"
+    add_to_path "/Applications/WezTerm.app/Contents/MacOS"
+    add_to_path "/Applications/VSCodium.app/Contents/Resources/app/bin"
 
+    add_to_path "/opt/homebrew/bin"
+
+	#add_to_path "/opt/local/libexec/gnubin"
+	add_to_path "$HOME/Library/Python/3.9/bin"
+	
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     add_to_path "$HOME/Programs/android-platform-tools"
 
 fi
+
+#############################
+
+export NO_AT_BRIDGE=1 
 
 #############################
 

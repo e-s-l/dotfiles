@@ -51,7 +51,8 @@
     "workbench.list.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.cursorBlinking": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "explorer.confirmDragAndDrop": false,
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false
 }
