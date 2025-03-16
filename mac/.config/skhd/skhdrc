@@ -15,12 +15,20 @@
 # cmd - shift - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
 
 # Wezterm
-cmd + shift - t : open -na "wezterm"
+#cmd + shift - t : open -na "wezterm"
+ctrl - t : open -na "wezterm"
+
 
 # Firefox
-cmd + shift - n : open -na "firefox"
+ctrl- n : open -na "firefox"
 
 # Choose applications
-cmd - r : ls /Applications | choose
+#cmd - r : ls /Applications | choose
 #cmd - r : echo "test" 
+
+ctrl- r: ls /Applications/ /Applications/Utilities/ /System/Applications/ /System/Applications/Utilities/ | \
+    grep '\.app$' | \
+    sed 's/\.app$//g' | \
+    choose | \
+    xargs -I {} open -a "{}.app"
 
