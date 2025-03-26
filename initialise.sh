@@ -75,7 +75,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # xresources (for uRXVT)
     create $LINUXCONF/X11/.Xresources $HOME/.Xresources
     # hot-key daemon
-    create $LINUX/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+    create $LINUX/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
     # terminal multiplexer
     create $LINUXCONF/tmux/.tmux.conf $HOME/.tmux.conf 
     # HUD

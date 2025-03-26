@@ -33,11 +33,20 @@ PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
 # DEFAULT SHELL #
 #################
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
-	[[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  #exec tmux new -s hello
-  exec tmux
-fi
+# I like to default to tmux in urxvt (which can use the extra functionality) 
+# but not any terminals, ideally.
+
+case "$TERM" in
+    rxvt-unicode-256color | screen-256color)
+        if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+          exec tmux
+        fi
+        ;;
+    *)
+        # For other terminal types, don't start tmux
+        ;;
+esac
+
 
 ############
 # GREETING #
