@@ -57,6 +57,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     create $MACCONF/sketchybar/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
     # hmmm
     cp -r $MACCONF/sketchybar/plugins $HOME/.config/sketchybar/
+	# tmux
+	create $ALL/tmux/.tmux.conf $HOME/.tmux.conf
+
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 

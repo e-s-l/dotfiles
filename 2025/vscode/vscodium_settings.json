@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default High Contrast Light",
+    "workbench.colorTheme": "Default High Contrast Dark",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
@@ -54,5 +54,5 @@
     "editor.tabSize": 4,
     "explorer.confirmDragAndDrop": false,
     "git.openRepositoryInParentFolders": "never",
-    "clangd.path": "/home/pearl/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd"
+    "explorer.confirmDelete": false
 }

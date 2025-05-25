@@ -1,0 +1,11 @@
+super + shift + f
+    firefox
+
+super + w
+    rofi -show window
+
+super + r
+    rofi -show drun
+
+super + d
+    rofi -show run
