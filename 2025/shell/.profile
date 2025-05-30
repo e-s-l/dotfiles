@@ -85,6 +85,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     add_to_path "$HOME/Programs/android-platform-tools"
+	add_to_path "/opt/floorp"
+	add_to_path "/opt/idea/bin"
+
 
 fi
 
@@ -97,8 +100,8 @@ export NO_AT_BRIDGE=1
 # FOOL THE BELOW LEADS TO AN INFIINITE LOOP
 # if you include loading the profile in the bash run control...
 
-if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
-elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
-    . "$HOME/.zshrc"
-fi
+#if [ "$SHELL_TYPE" = "bash" ] && [ -f "$HOME/.bashrc" ]; then
+#    . "$HOME/.bashrc"
+#elif [ "$SHELL_TYPE" = "zsh" ] && [ -f "$HOME/.zshrc" ]; then
+#    . "$HOME/.zshrc"
+#fi

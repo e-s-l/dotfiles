@@ -52,3 +52,8 @@ create $PWD/picom/picom.conf $HOME/.config/picom.conf
 # polybar 
 create $PWD/polybar/config.ini $HOME/.config/polybar/config.ini
 create $PWD/polybar/launch.sh $HOME/.config/polybar/launch.sh
+
+# log-in manager
+
+create $PWD/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+create $PWD/lightdm/lightdm.conf /etc/lightdm/lightdm-gtk-greeter.conf

@@ -42,3 +42,6 @@ alias lhrat="ls -lhrat --color=auto"
 ### DMESG ###
 
 alias dmesg='sudo dmesg -wH' 
+
+### i3 ###
+alias logout='i3-msg exit'

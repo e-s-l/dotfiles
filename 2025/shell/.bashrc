@@ -1,7 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 ###########
 # PROFILE #
 ###########
@@ -166,4 +162,6 @@ fi
 # PATH #
 ########
 
-export PATH=$PATH:~/bin
+#if [ -e "~/bin" ]; then
+#	export PATH=$PATH:~/bin
+#fi
