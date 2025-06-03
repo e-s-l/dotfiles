@@ -39,7 +39,7 @@
     "editor.wrappingIndent": "same",
     "editor.wordWrapColumn": 80,
     "editor.rulers": [
-        80
+        78
     ],
     "window.commandCenter": false,
     "problems.visibility": false,

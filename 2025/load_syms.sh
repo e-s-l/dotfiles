@@ -40,8 +40,9 @@ create $PWD/rofi/theme.rasi $HOME/.config/rofi/theme.rasi
 # vscode
 create $PWD/vscode/vscodium_settings.json $HOME/.config/VSCodium/User/settings.json
     
-# neovim
-create $PWD/vim/.vimrc $HOME/.config/nvim/init.vim
+# vim/neovim
+create $PWD/vim/.vimrc $HOME/.vimrc
+create $PWD/vim/init.vim $HOME/.config/nvim/init.vim
 
 # tiling windows
 create $PWD/i3/config $HOME/.config/i3/config
