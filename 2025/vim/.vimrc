@@ -6,10 +6,11 @@
 "INDENTATION:"
 """"""""""""""
 "Set tab to pep-8 standard of 4 spaces:
-"set expandtab
-set tabstop=4
+set expandtab	    "convert all \t into x*\s
+set tabstop=4	    "indent level of 4 cols
 set softtabstop=4
-set shiftwidth=4
+set shiftwidth=4	"indent/outdent by 4 cols
+set shiftround		"always indent to nearest tabstop
 "Set autoindentation when required:
 set autoindent
 "backspace everything:
@@ -19,7 +20,7 @@ set backspace=indent,eol,start
 "EDITOR SIZE"
 """""""""""""
 "Set max size of editor line:
-set textwidth=80 
+set textwidth=78 
 "132
 "Note: 0 means no limit.
 """
