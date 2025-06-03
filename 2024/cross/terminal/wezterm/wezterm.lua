@@ -80,7 +80,7 @@ config.window_background_opacity = 0.9
 
 -- config.disable_default_key_bindings = true
 
-config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 'a', mods = 'CMD', timeout_milliseconds = 1000 }
 
 config.keys = {
   -- Sends ESC + b and ESC + f sequence, which is used

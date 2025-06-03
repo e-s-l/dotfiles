@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#
+# DO NOT USE THIS WITHOUT CHECKING FIRST
+# NEEDS TO BE CORRECT IN-LINE WITH THE HOME ONE
+#
+
 ###########
 # PROFILE #
 ###########
@@ -166,5 +171,3 @@ fi
 ########
 
 export PATH=$PATH:~/bin
-
-

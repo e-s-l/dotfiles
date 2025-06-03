@@ -1,20 +1,25 @@
 #
 # remember to run: source ~/.bashrc
+#
 
 ###########
 # PROFILE #
 ###########
 
+# Do NOT this now, since including the basrc (or zshrc) in the .profile:
+
 # Source .profile for shared settings
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
+#if [ -f ~/.profile ]; then
+#    . ~/.profile
+#fi
 
 ##########
 # PROMPT #
 ##########
 
 PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
+
+# Alts:
 #PS1="\$ "
 
 ###############
@@ -24,21 +29,30 @@ PS1=":\[\033[01;34m\]\w\[\033[00m\]\$ "
 # update LNS & COLS if window changed size:
 #shopt -s checkwinsize
 
-
 #################
 # DEFAULT SHELL #
 #################
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
-	[[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  #exec tmux new -s hello
-  exec tmux
-fi
+# I like to default to tmux in urxvt (which can use the extra functionality) 
+# but not any terminals, ideally.
+
+case "$TERM" in
+    rxvt-unicode-256color | screen-256color)
+        if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+          exec tmux
+        fi
+        ;;
+    *)
+        # For other terminal types, don't start tmux
+        ;;
+esac
 
 
-###
+############
+# GREETING #
+############
+
 # fortune | cowsay -f hellokitty; echo; echo;
-###
 
 #############################################
 
@@ -89,19 +103,15 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+# Note: I am including .aliases in the .profile
+# so not using the below but could, i guess be useful for bash specific aliases
+# (if any)
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
