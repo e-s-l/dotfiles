@@ -129,5 +129,23 @@ set ttimeoutlen=50
 "use os clipboard?
 set clipboard+=unnamedplus
 
-""""""""""""""""""""""""""""""""""""""
-"NOW DO KEY MAPPINGS LOL
+"""""""""""""""""""""""""""
+" NOW DO KEY MAPPINGS LOL "
+"""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""
+" the following inspired by this		 "
+" http://howivim.com/2016/damian-conway/ "
+""""""""""""""""""""""""""""""""""""""""""
+" improve the standard search
+set incsearch  ignorecase  smartcase  hlsearch
+" auto write the buffer
+set autowrite
+" dial up persistent undo
+if has('persistent_undo')
+    set undolevels=5000
+    set undodir=$HOME/.VIM_UNDO_FILES
+    set undofile
+endif
+" swap file rotate after how many key strokes
+set updatecount=100		" default is 200
