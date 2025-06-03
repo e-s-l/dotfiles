@@ -12,7 +12,7 @@
 -- returns color scheme dependant on operating system theme setting (dark/light)
 local function color_scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Japanesque"
+    return "Mikazuki (terminal.sexy)"
   else
     return "Japanesque"       --"Tokyo Night Light (Gogh)"
   end

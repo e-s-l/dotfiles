@@ -1,8 +1,6 @@
 
 alias ssh='ssh -X'
 
-
-
 ### COLOUR ###
 
 alias ls='ls -a --color=auto'
@@ -27,6 +25,7 @@ alias egrep='egrep --color=auto'
 # Colour:
 alias ip='ip -c'
 alias minicom='minicom -con'
+
 ### CONTROL ###
 
 alias restart='sudo shutdown -r now'
@@ -42,3 +41,7 @@ alias lhrat="ls -lhrat --color=auto"
 ### DMESG ###
 
 alias dmesg='sudo dmesg -wH' 
+
+### MISC
+
+alias cdprotondrive='cd /Library/CloudStorage/ProtonDrive-sullivan.lester@protonmail.com-folder'

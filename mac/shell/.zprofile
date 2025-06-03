@@ -16,3 +16,9 @@ fi
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ENV_HINTS=1
+
+########
+# PERL #
+########
+
+source ~/perl5/perlbrew/etc/bashrc
