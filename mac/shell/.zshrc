@@ -20,3 +20,11 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 setopt EXTENDED_HISTORY
+source ~/perl5/perlbrew/etc/bashrc
+
+
+# load autocompletion
+autoload -Uz compinit
+compinit
+# Load Angular CLI autocompletion.
+source <(ng completion script)

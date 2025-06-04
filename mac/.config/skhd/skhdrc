@@ -16,17 +16,17 @@
 
 # Wezterm
 #cmd + shift - t : open -na "wezterm"
-ctrl - t : open -na "wezterm"
-
+#ctrl - t : open -na "wezterm"
+alt - return : open -na "wezterm"
 
 # Firefox
-ctrl- n : open -na "firefox"
+alt + shift - n : open -na "firefox"
 
 # Choose applications
 #cmd - r : ls /Applications | choose
 #cmd - r : echo "test" 
 
-ctrl- r: ls /Applications/ /Applications/Utilities/ /System/Applications/ /System/Applications/Utilities/ | \
+alt - r: ls /Applications/ /Applications/Utilities/ /System/Applications/ /System/Applications/Utilities/ | \
     grep '\.app$' | \
     sed 's/\.app$//g' | \
     choose | \
