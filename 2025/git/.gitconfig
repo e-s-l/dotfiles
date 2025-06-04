@@ -1,0 +1,24 @@
+[user]
+    name = pearl
+    email = 934121@protonmail.com
+
+# DOS: \r (carriage return) \n (line feed), *NIX: just \n so:
+# On Nix set autocrlf input
+# On Windows set core.autocrlf true
+# Hence:
+[core]
+    autocrlf =  input
+
+#NOTE: coz u fucked up, will in vim have to run ":set fileformat=unix" to fix the line endings
+
+[fetch]
+    prune = true
+
+[init]
+    defaultBranch = main
+    
+[pull]
+	rebase = false
+
+[url "git@github.com"]
+	insteadOf = https://github.com

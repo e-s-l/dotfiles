@@ -1,0 +1,58 @@
+{
+    "workbench.colorTheme": "Default High Contrast Light",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.cursorStyle":"line",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Inconsolata', 'IBMPlexMono'",
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "files.trimFinalNewlines": true,
+    "editor.bracketPairColorization.enabled": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "files.associations": {
+        "*html": "html",
+        "*njk": "html",
+        "*php": "php"
+    },
+    "emmet.useInlineCompletions": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact",
+        "vue-html": "html",
+        "vue": "html",
+        "django-html": "html",
+        "php": "html"
+    },
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 80,
+    "editor.rulers": [
+        78
+    ],
+    "window.commandCenter": false,
+    "problems.visibility": false,
+    "editor.renderWhitespace": "all",
+    "editor.insertSpaces": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.cursorBlinking": true,
+    "editor.tabSize": 4,
+    "explorer.confirmDragAndDrop": false,
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false
+}

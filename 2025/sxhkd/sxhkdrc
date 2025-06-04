@@ -1,0 +1,14 @@
+super + shift + f
+    /opt/floorp/floorp
+
+super + w
+    rofi -show window
+
+super + r
+    rofi -show drun
+
+super + d
+    rofi -show run
+
+super + shift + l
+	dm-tool switch-to-greeter
