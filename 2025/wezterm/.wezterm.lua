@@ -34,7 +34,7 @@ local wezterm = require 'wezterm'
 
 config.window_frame = {
 		font = require("wezterm").font({ family = "Inconsolata" }),
-		font_size = 12,
+		font_size = 10,
 }
 
 ----------------
@@ -54,7 +54,7 @@ config.font = wezterm.font_with_fallback {
 	'JetBrainsMono Nerd Font',
 }
 
-config.font_size = 13.0
+config.font_size = 11.0
 
 --
 config.color_scheme = color_scheme_for_appearance(wezterm.gui.get_appearance())
@@ -73,8 +73,7 @@ config.automatically_reload_config = true
 
 ----------------------
 
-config.window_background_opacity = 0.9
-
+config.window_background_opacity = 0.95
 
 ----------------------
 

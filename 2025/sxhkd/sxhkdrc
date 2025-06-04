@@ -12,3 +12,6 @@ super + d
 
 super + shift + l
 	dm-tool switch-to-greeter
+
+alt + return
+	konsole

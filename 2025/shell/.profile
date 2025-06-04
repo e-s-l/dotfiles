@@ -57,8 +57,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     add_to_path "/opt/homebrew/bin"
 
-	#add_to_path "/opt/local/libexec/gnubin"
-	add_to_path "$HOME/Library/Python/3.9/bin"
+    #add_to_path "/opt/local/libexec/gnubin"
+    add_to_path "$HOME/Library/Python/3.9/bin"
 	
 
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -68,9 +68,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     #########
 
     add_to_path "$HOME/Programs/android-platform-tools"
-	add_to_path "/opt/floorp"
-	add_to_path "/opt/idea/bin"
-
+    add_to_path "/opt/floorp"
+    add_to_path "/opt/idea/bin"
 
 fi
 

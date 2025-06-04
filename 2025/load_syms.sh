@@ -47,7 +47,7 @@ create $PWD/wezterm/.wezterm.lua $HOME/.wezterm.lua
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
     # bash
-    create $PWD/shell/.bash_profile
+    create $PWD/shell/.bash_profile $HOME/.bash_profile
     create $PWD/shell/.bashrc $HOME/.bashrc
     
     # xresources (for uRXVT)
@@ -55,7 +55,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     
     # hot-key daemon
     create $PWD/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
-    
+    # should only if x11 display or something
+
     # app selector
     create $PWD/rofi/config.rasi $HOME/.config/rofi/config.rasi
     create $PWD/rofi/theme.rasi $HOME/.config/rofi/theme.rasi
