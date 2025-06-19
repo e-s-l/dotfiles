@@ -1,6 +1,7 @@
 
 alias ssh='ssh -X'
 
+alias ssh-vm='ssh 192.168.122.207 -l sulli'
 
 
 ### COLOUR ###

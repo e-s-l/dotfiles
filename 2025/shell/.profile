@@ -15,9 +15,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-if [ -f ~/.aliases_work ]; then
-    . ~/.aliases_work
-fi
+#if [ -f ~/.aliases_work ]; then
+#    . ~/.aliases_work
+#fi
 
 ########
 # PATH #
@@ -70,6 +70,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     add_to_path "$HOME/Programs/android-platform-tools"
     add_to_path "/opt/floorp"
     add_to_path "/opt/idea/bin"
+    add_to_path "/opt/android-studio/bin"
 
 fi
 

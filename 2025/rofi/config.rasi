@@ -3,6 +3,12 @@
  * run rofi -dump-config
  */
 
+
+
+* {
+ transparency: "real";
+}
+
 configuration {
     display-drun: "applications";
     display-window: "windows";
