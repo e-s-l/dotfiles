@@ -24,7 +24,7 @@ ZSH_THEME="eastwood"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
+ zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
@@ -52,7 +52,7 @@ ZSH_THEME="eastwood"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -70,7 +70,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git perl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 #################
 # NOT Oh My Zsh #
 #################
+#
+# ALL THIS SHOULD GO SOMEWHERE ELSE
 
 #########
 # pyenv #
@@ -133,8 +135,8 @@ setopt HIST_IGNORE_SPACE HIST_IGNORE_DUPS
 ############
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+#PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 source ~/perl5/perlbrew/etc/bashrc

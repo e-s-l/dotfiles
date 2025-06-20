@@ -130,6 +130,7 @@ declare -A programs=(
     ["vim/.vimrc"]="$HOME/.vimrc" 
     ["vim/init.vim"]="$config_dir/nvim/init.vim" 
     ["codium/vscodium_settings.json"]="$config_dir/VSCodium/User/settings.json" 
+    ["task/taskrc"]="$HOME/.taskrc"
 )
 
 ### FIXME codium on mac defaults to different configuration directory
@@ -167,7 +168,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         ["rofi/config.rasi"]="$config_dir/rofi/config.rasi"
         ["rofi/theme.rasi"]="$config_dir/rofi/theme.rasi"
         ["sxhkd/sxhkdrc"]="$config_dir/sxhkd/sxhkdrc"
-        ["urxvt/.Xresources"]="$config_dir/sxhkd/sxhkdrc"
+        ["urxvt/.Xresources"]="$HOME/.Xresources"
         ["bspwm/bspwmrc"]="$config_dir/bspwm/bspwmrc"
     )
         
@@ -214,14 +215,13 @@ create_sym() {
             else
                 echo "${prefix} Skipping $dest, already exists."
             fi
-        else
-            [ "$dry" != true ] &&  mkdir -p "$(dirname "$dest")"
-        
-            if [ "$dry" != true ]; then
-                ln -s "$src" "$dest" || { echo "Failed to create symlink: $dest"; exit 1; }
-            fi
-            echo "${prefix} Created symlink: $dest -> $src"
         fi
+        [ "$dry" != true ] &&  mkdir -p "$(dirname "$dest")"
+        
+        if [ "$dry" != true ]; then
+            ln -s "$src" "$dest" || { echo "Failed to create symlink: $dest"; exit 1; }
+        fi
+        echo "${prefix} Created symlink: $dest -> $src"
     fi
 }
 
