@@ -6,5 +6,9 @@
 - configure themes & icon packs, and include these here
 - comment the configs & make some notes on all of this
 - have a crack at yabai on mac
-
+- add config files for:
+    - taskwarrior
+    - 
+- maybe merge your userchromes into here?
+    - need to fix active tab highlighting here btw
 
