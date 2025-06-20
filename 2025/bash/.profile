@@ -1,11 +1,4 @@
-# profile to be loaded by either bash or zsh
-
-# Check if running Bash or Zsh
-if [ -n "$BASH_VERSION" ]; then
-    SHELL_TYPE="bash"
-elif [ -n "$ZSH_VERSION" ]; then
-    SHELL_TYPE="zsh"
-fi
+# profile to be loaded by shell (*eg* zsh or bash) profile
 
 ###############
 # ALIAS DEFNS #
@@ -14,10 +7,6 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
-
-#if [ -f ~/.aliases_work ]; then
-#    . ~/.aliases_work
-#fi
 
 ########
 # PATH #
@@ -35,14 +24,13 @@ add_to_path() {
 add_to_path "$HOME/bin"
 add_to_path "$HOME/.local/bin"
 
-# os-specfic path additions
+# os-specfic path and environment settings
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
     #######
     # mac #
     #######
-
-    # All this should be moved into the .zprofile file...
 
     # bins
     add_to_path "/opt/local/bin"
@@ -72,9 +60,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     add_to_path "/opt/idea/bin"
     add_to_path "/opt/android-studio/bin"
 
+    # for dbind
+    # what does this do again?
+    export NO_AT_BRIDGE=1 
+
 fi
-
-#############################
-
-# what does this do again?
-export NO_AT_BRIDGE=1 
