@@ -161,14 +161,16 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # programs to load,
     # picom, polybar, rofi, sxhkd, X11 (urxvt), bspwm
     
-    ### FIXME (when back on linux)
     declare -A linuxPrograms=(
         ["picom/picom.conf"]="$config_dir/picom.conf"
         ["polybar/config.ini"]="$config_dir/polybar/config.ini"
+        ["rofi/config.rasi"]="$config_dir/rofi/config.rasi"
+        ["rofi/theme.rasi"]="$config_dir/rofi/theme.rasi"
+        ["sxhkd/sxhkdrc"]="$config_dir/sxhkd/sxhkdrc"
+        ["urxvt/.Xresources"]="$config_dir/sxhkd/sxhkdrc"
+        ["bspwm/bspwmrc"]="$config_dir/bspwm/bspwmrc"
     )
         
-     #   "picom" "polybar" "rofi" "sxhkd" "X11" "bspwm")
-
     for key in "${!linuxPrograms[@]}"; do
         programs["$key"]="${linuxPrograms[$key]}"
     done
@@ -214,11 +216,12 @@ create_sym() {
             fi
         else
             [ "$dry" != true ] &&  mkdir -p "$(dirname "$dest")"
+        
+            if [ "$dry" != true ]; then
+                ln -s "$src" "$dest" || { echo "Failed to create symlink: $dest"; exit 1; }
+            fi
+            echo "${prefix} Created symlink: $dest -> $src"
         fi
-        if [ "$dry" != true ]; then
-            ln -s "$src" "$dest" || { echo "Failed to create symlink: $dest"; exit 1; }
-        fi
-        echo "${prefix} Created symlink: $dest -> $src"
     fi
 }
 
