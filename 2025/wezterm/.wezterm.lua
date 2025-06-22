@@ -34,7 +34,7 @@ local wezterm = require 'wezterm'
 
 config.window_frame = {
 		font = require("wezterm").font({ family = "Inconsolata" }),
-		font_size = 10,
+		font_size = 12,
 }
 
 ----------------
@@ -54,7 +54,7 @@ config.font = wezterm.font_with_fallback {
 	'JetBrainsMono Nerd Font',
 }
 
-config.font_size = 11.0
+config.font_size = 12.0
 
 --
 config.color_scheme = color_scheme_for_appearance(wezterm.gui.get_appearance())
@@ -82,6 +82,7 @@ config.window_background_opacity = 0.95
 config.leader = { key = 'a', mods = 'CMD', timeout_milliseconds = 1000 }
 
 config.keys = {
+
   -- Sends ESC + b and ESC + f sequence, which is used
   -- for telling your shell to jump back/forward.
   {

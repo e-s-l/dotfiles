@@ -54,5 +54,6 @@
     "editor.tabSize": 4,
     "explorer.confirmDragAndDrop": false,
     "git.openRepositoryInParentFolders": "never",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers": "on"
 }
