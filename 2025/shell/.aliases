@@ -1,7 +1,8 @@
 
+### MISC ###
+
+alias sync_time="sudo chronyc -a makestep"
 alias ssh='ssh -X'
-
-
 
 ### COLOUR ###
 

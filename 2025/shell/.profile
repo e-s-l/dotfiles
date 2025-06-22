@@ -70,6 +70,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     add_to_path "$HOME/Programs/android-platform-tools"
     add_to_path "/opt/floorp"
     add_to_path "/opt/idea/bin"
+    add_to_path "/opt/pycharm/bin"
 
 fi
 
