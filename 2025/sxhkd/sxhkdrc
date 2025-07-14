@@ -25,10 +25,11 @@ super + Return
 super + w
     rofi -show window
 
-super + r
+#super + @space
+super + d
     rofi -show drun
 
-super + d
+super + r
     rofi -show run
 
 # lock screen
@@ -146,3 +147,19 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#########
+# audio #
+#########
+
+# vol. up
+XF86AudioRaiseVolume
+    amixer -q set Master 5%+
+
+
+XF86AudioLowerVolume
+    amixer -q set Master 5%-
+
+XF86AudioMute
+    amixer -q set Master toggle
+
