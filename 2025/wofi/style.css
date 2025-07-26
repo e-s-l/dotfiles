@@ -1,0 +1,45 @@
+window {
+    margin: 0px;
+    border: 1px solid rgba(119, 123, 88, 1);
+    background-color: rgba(33, 0, 33, 0.9);
+    border-radius: 6px;
+    font-family: "Inconsolata", "IBMPlexMono", "Hack", monospace;
+    font-size: 14px;
+    color: rgba(212, 202, 188, 1);
+}
+
+#input {
+    padding: 6px;
+    border: none;
+    background-color: transparent;
+    color: rgba(212, 202, 188, 1);
+}
+
+#inner-box {
+    padding: 6px;
+}
+
+#outer-box {
+    padding: 6px;
+}
+
+#entry {
+    padding: 4px;
+    margin: 2px 0;
+    border-radius: 3px;
+    background-color: transparent;
+    color: rgba(212, 202, 188, 1);
+}
+
+#entry:selected {
+    background-color: rgba(219, 223, 188, 1);
+    color: rgba(2, 20, 63, 1);
+}
+
+#scroll {
+    margin: 4px;
+}
+
+#img {
+    margin-right: 8px;
+}

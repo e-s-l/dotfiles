@@ -1,2 +1,2 @@
-[ -f ~/.zshrc ] && . ~/.zshrc
+#[ -f ~/.zshrc ] && . ~/.zshrc
 [ -f ~/.profile ] && . ~/.profile

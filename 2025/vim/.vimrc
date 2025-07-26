@@ -2,6 +2,22 @@
 "CONFIG FILE FOR VIM EDITOR"
 """"""""""""""""""""""""""""
 
+
+
+""""""""""""
+" for hmtl "
+""""""""""""
+
+" :set filetype=html
+runtime macros/matchit.vim
+" now press % to jump between tags
+
+filetype plugin on
+filetype indent on
+
+autocmd FileType xml,html,htmldjango nmap <LocalLeader>s :s;>\s*<;>\r<;g<CR>='[
+autocmd FileType xml,html,htmldjango inoremap </ </<C-x><C-o>
+
 """"""""
 " ABOUT:
 "

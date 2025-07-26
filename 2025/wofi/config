@@ -1,0 +1,9 @@
+show=drun
+prompt=...
+allow-images=true
+location=center
+width=33%
+height=300
+lines=6
+insensitive=true
+hide-scroll=true

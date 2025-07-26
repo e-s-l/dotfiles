@@ -17,7 +17,7 @@ ZSH_THEME="eastwood"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -72,7 +72,14 @@ ZSH_THEME="eastwood"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git perl)
 
+
+
+# a hack to block oh-my-zsh aliase
+alias() { :; }
+
 source $ZSH/oh-my-zsh.sh
+
+unset -f alias
 
 # User configuration
 
@@ -134,9 +141,13 @@ setopt HIST_IGNORE_SPACE HIST_IGNORE_DUPS
 # perlbrew #
 ############
 
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+#PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 #PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 #PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 #PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 #PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-source ~/perl5/perlbrew/etc/bashrc
+#source ~/perl5/perlbrew/etc/bashrc
+
+
+# Load Angular CLI autocompletion.
+#source <(ng completion script)

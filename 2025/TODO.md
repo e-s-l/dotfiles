@@ -2,7 +2,13 @@
 
 ## urgent
 
+Configure the load script to load either mac or linux .profile, .zshrc etc as
+syms...
+
+
 zsh is a bit fucker
+
+add hyprland and waybar for linux when using wayland...
 
 ## older
 

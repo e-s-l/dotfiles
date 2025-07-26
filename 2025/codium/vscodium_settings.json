@@ -1,5 +1,17 @@
+/*
+Extensions:
+live sass compiler
+angular language service
+vscodevim (sometimes)
+*/
+
+/*
+favourite themes
+Default High Contrast Light
+*/
+
 {
-    "workbench.colorTheme": "Default High Contrast Dark",
+    "workbench.colorTheme": "Default High Contrast Light",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
@@ -20,7 +32,6 @@
     "emmet.triggerExpansionOnTab": true,
     "emmet.showSuggestionsAsSnippets": true,
     "editor.snippetSuggestions": "top",
-    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "files.associations": {
         "*html": "html",
         "*njk": "html",
@@ -33,6 +44,11 @@
         "vue-html": "html",
         "vue": "html",
         "django-html": "html",
+        "php": "html"
+    },
+    "emmet.showExpandedAbbreviation": "always",
+    "html-css-class-completion.enableEmmetSupport": true,
+    "emmet.syntaxProfiles": {
         "php": "html"
     },
     "editor.wordWrap": "wordWrapColumn",
