@@ -30,5 +30,5 @@ source ~/perl5/perlbrew/etc/bashrc
 autoload -Uz compinit
 compinit
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+# mongodb
+export PATH="$HOME/.local/mongodb/bin:$PATH"
