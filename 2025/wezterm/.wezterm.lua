@@ -54,7 +54,7 @@ config.font = wezterm.font_with_fallback {
 	'JetBrainsMono Nerd Font',
 }
 
-config.font_size = 13.0
+config.font_size = 12.0
 
 --
 config.color_scheme = color_scheme_for_appearance(wezterm.gui.get_appearance())
@@ -73,8 +73,7 @@ config.automatically_reload_config = true
 
 ----------------------
 
-config.window_background_opacity = 0.9
-
+config.window_background_opacity = 0.95
 
 ----------------------
 
@@ -83,6 +82,7 @@ config.window_background_opacity = 0.9
 config.leader = { key = 'a', mods = 'CMD', timeout_milliseconds = 1000 }
 
 config.keys = {
+
   -- Sends ESC + b and ESC + f sequence, which is used
   -- for telling your shell to jump back/forward.
   {
