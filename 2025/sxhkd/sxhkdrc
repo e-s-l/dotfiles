@@ -32,9 +32,11 @@ super + d
 super + r
     rofi -show run
 
-# lock screen
-super + shift + l
+#############################
+# mac-ish lock screen
+super + shift + q
 	dm-tool switch-to-greeter
+#############################
 
 ############
 
@@ -73,6 +75,7 @@ super + g
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# it seems that the t,shift block doesnt matter
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -108,9 +111,22 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+# switch monitors/dsktops/workspaces
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#######################################
+# quick switch between desktops
+super + ctrl + {Left, Right}
+    bspc desktop -f {prev,next}.local
+
+
+# quick send windows between desktops
+super + shift + {Left,Right}
+    bspc node -d {prev,next}.local --follow
+
+#######################################
 
 #
 # preselect

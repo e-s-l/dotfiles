@@ -64,6 +64,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     add_to_path "/opt/floorp"
     add_to_path "/opt/idea/bin"
     add_to_path "/opt/android-studio/bin"
+    add_to_path "/opt/apache-ant/bin"
 
     # for dbind
     export NO_AT_BRIDGE=1 
