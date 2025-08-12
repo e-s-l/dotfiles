@@ -11,10 +11,12 @@
         //"hyprland/mode",
         //"hyprland/scratchpad"
     ],
+    /*
     "modules-center": [
         "clock"
        // "hyprland/window"
     ],
+    */
     "modules-right": [
        // "clock",
         "network",
