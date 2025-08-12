@@ -5,7 +5,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # start polybar
-
+# this should be wihtin a launch.sh...
 killall -q polybar
 while pgrep -x polybar >/dev/null;do sleep 1;done
 polybar main &
@@ -30,3 +30,18 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+#
+# auto hide polybar and disable sleep when on fullscreen
+# 
+bspc subscribe node_state | while read -r line: do
+    if echo "$line" | grep -q 'fullscreen true': then
+        polybar-msg cmd hide
+        xset -dpms
+        xset s off
+    elif echo "$line" | grep -q 'fullscreen false': then
+        polybar-msg cmd show
+        xset +dpms
+        xset s on
+    fi
+done &

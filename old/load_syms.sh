@@ -39,7 +39,6 @@ create $PWD/vim/.vimrc $HOME/.vimrc
 create $PWD/vim/init.vim $HOME/.config/nvim/init.vim
 
 # wezterm
-
 create $PWD/wezterm/.wezterm.lua $HOME/.wezterm.lua
 
 ### linux
@@ -75,6 +74,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     create $PWD/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
     create $PWD/lightdm/lightdm.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
+    # vscode
+    create $PWD/vscode/vscodium_settings.json $HOME/.config/VSCodium/User/settings.json
+
 fi
 
 ### mac
@@ -89,6 +91,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     create $PWD/skhd/skhdrc $HOME/.config/skhd/skhdrc
 
     # vscode
-    #create $PWD/vscode/vscodium_settings.json "$HOME/Library/Application Support/VSCodium/User/settings.json"
+    create $PWD/vscode/vscodium_settings.json "$HOME/Library/Application Support/VSCodium/User/settings.json"
 
 fi

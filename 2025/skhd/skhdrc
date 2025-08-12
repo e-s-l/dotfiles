@@ -19,9 +19,9 @@
 # cmd - shift - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
 
 # Wezterm
-cmd + shift - t : open -na "wezterm"
+#cmd + shift - t : open -na "wezterm"
 #ctrl - t : open -na "wezterm"
-#alt - return : open -na "wezterm"
+alt - return : open -na "wezterm"
 
 # Firefox
 alt + shift - n : open -na "firefox"

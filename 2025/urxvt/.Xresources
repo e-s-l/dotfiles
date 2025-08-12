@@ -43,7 +43,7 @@ URxvt.color15: #EEEEEC
 ! Font
 
 URxvt.font: \
- xft: Inconsolata:size=12:style=Regular:spacing=Mono:minspace=False:antialias=true, \
+ xft: Inconsolata Condensed Black:size=12:style=Regular:spacing=Mono:minspace=False:antialias=true, \
   xft: IBMPlexMono-Regular:size=12:spacing=Mono:minspace=False:antialias=true, \
     xft: Hack-Regular:size=12:spacing=Mono:minspace=False:antialias=true
 

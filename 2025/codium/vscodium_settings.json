@@ -73,4 +73,10 @@ Default High Contrast Light
     "explorer.confirmDelete": false,
     "editor.lineNumbers": "on",
     "workbench.iconTheme": "material-icon-theme"
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "eslint.validate": [
+        "javascript"
+    ],
+    "extensions.autoUpdate": false
 }

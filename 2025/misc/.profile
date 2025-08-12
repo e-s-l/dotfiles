@@ -4,6 +4,8 @@
 # ALIAS DEFNS #
 ###############
 
+# if using oh-my-zsh then this needs to be moved
+
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
@@ -63,9 +65,9 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     add_to_path "/opt/idea/bin"
     add_to_path "/opt/pycharm/bin"
     add_to_path "/opt/android-studio/bin"
+    add_to_path "/opt/apache-ant/bin"
 
     # for dbind
-    # what does this do again?
     export NO_AT_BRIDGE=1 
 
 fi

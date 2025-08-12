@@ -129,7 +129,6 @@ declare -A programs=(
     ["tmux/.tmux.conf"]="$HOME/.tmux.conf" 
     ["vim/.vimrc"]="$HOME/.vimrc" 
     ["vim/init.vim"]="$config_dir/nvim/init.vim" 
-    ["codium/vscodium_settings.json"]="$config_dir/VSCodium/User/settings.json" 
     ["task/taskrc"]="$HOME/.taskrc"
 )
 
@@ -149,7 +148,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     declare -A macPrograms=( 
         ["skhd/skhdrc"]="$config_dir/skhd/skhdrc" 
-        ["wezterm/.wezterm.lua"]="$HOME/.wezterm.lua" 
+        ["wezterm/.wezterm.lua"]="$HOME/.wezterm.lua"
+        ["codium/vscodium_settings.json"]="$HOME/Library/Application Support/VSCodium/User/settings.json" 
     )
 
     for key in "${!macPrograms[@]}"; do
@@ -170,6 +170,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
         ["sxhkd/sxhkdrc"]="$config_dir/sxhkd/sxhkdrc"
         ["urxvt/.Xresources"]="$HOME/.Xresources"
         ["bspwm/bspwmrc"]="$config_dir/bspwm/bspwmrc"
+        ["codium/vscodium_settings.json"]="$config_dir/VSCodium/User/settings.json"
     )
         
     for key in "${!linuxPrograms[@]}"; do
