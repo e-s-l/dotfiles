@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Default High Contrast Light",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorStyle":"line",
@@ -55,5 +54,11 @@
     "explorer.confirmDragAndDrop": false,
     "git.openRepositoryInParentFolders": "never",
     "explorer.confirmDelete": false,
-    "editor.lineNumbers": "on"
+    "editor.lineNumbers": "on",
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "eslint.validate": [
+        "javascript"
+    ],
+    "extensions.autoUpdate": false
 }

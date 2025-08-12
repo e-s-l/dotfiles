@@ -34,47 +34,15 @@ PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 #PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 source ~/perl5/perlbrew/etc/bashrc
 
+######
+export PATH="$HOME/.local/mongodb/bin:$PATH"
+
+
 ########################
 # node version manager #
 ########################
 # super fucking slow
-#export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Lazy-load NVM on first use of nvm, node, npm, or npx
-export NVM_DIR="$HOME/.nvm"
-
-_nvm_lazy_load() {
-  # Load nvm only once
-  unset -f node npm npx nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-}
-
-nvm() {
-  _nvm_lazy_load
-  nvm "$@"
-}
-
-node() {
-  _nvm_lazy_load
-  node "$@"
-}
-
-npm() {
-  _nvm_lazy_load
-  npm "$@"
-}
-
-npx() {
-  _nvm_lazy_load
-  npx "$@"
-}
-
-########################
-# angular command line #
-########################
-
-# Load Angular CLI autocompletion.
-#source <(ng completion script)
 
