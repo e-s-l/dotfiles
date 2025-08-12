@@ -61,7 +61,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 8px 12px;
+    padding: 6px 18px;
     background-color: transparent;
     color:  #64727D;
     margin: 2px;
@@ -145,6 +145,12 @@ button:hover {
         background-color: #ffffff;
         color: #000000;
     }
+}
+
+/* coz keep missing when it gets too low... */
+#battery.warning:not(.charging) {
+    color: #00ffff;
+    background-color: #000000;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -345,15 +351,18 @@ label:focus {
     background-color: #0069d4;
 }
 
+#clock {
+    color: #00ffff;
+    background-color: #000000;
+}
 
-#clock,
 #network,
 #pulseaudio,
 #pulseaudio.muted,
 #cpu,
 #memory,
 #battery {
-    padding: 8px 12px;
+    padding: 6px 18px;
     margin: 2px;
     background-color: #64727D;
     color: #000000;
@@ -372,7 +381,7 @@ label:focus {
 */
 
 #workspace, #window {
-    padding: 8px 12px;
+    padding: 6px 18px;
     margin: 4px;
     border-radius: 5px;
 }
