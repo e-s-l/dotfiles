@@ -79,7 +79,8 @@ button:hover {
     background-color: #000000;  /*64727d  89b4fa*/
     color: #00ffff;         /* 1e1e2e */
     font-weight: bold;
-    border: 2px solid #000000;
+    border: 1px solid #64727D;
+    border-radius: 5px;
     box-shadow: 0 0 2px #000000;
     transition: all 0.2s ease;
     border-radius: 5px;
@@ -139,7 +140,7 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #000000;
+    color: #00ffff;
     /* background-color: #26A65B; */
 }
 
@@ -152,8 +153,10 @@ button:hover {
 
 /* coz keep missing when it gets too low... */
 #battery.warning:not(.charging) {
-    color: #00ffff;
+    color: #ffff00;
     background-color: #000000;
+    border: 2px solid #ff0000;
+    border-color: #ffff00;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -367,9 +370,9 @@ label:focus {
 #battery {
     padding: 6px 18px;
     margin: 2px;
-    background-color: #64727D;
-    color: #000000;
-    border: 2px solid #000000;
+    background-color: transparent;
+    color: #00ffff;
+    border: 1px solid #64727D;
     border-radius: 5px;
     box-shadow: 0 0 2px #000000;
     min-width: 6px;

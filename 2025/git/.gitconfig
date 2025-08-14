@@ -8,6 +8,9 @@
 # Hence:
 [core]
     autocrlf =  input
+	excludesfile = /home/pearl/.gitignore_global
+    editor = vim                
+    # do we need a --wait following the above?
 
 #NOTE: coz u fucked up, will in vim have to run ":set fileformat=unix" to fix the line endings
 
