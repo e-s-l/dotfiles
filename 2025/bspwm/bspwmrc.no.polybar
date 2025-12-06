@@ -10,9 +10,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # start polybar
 # this should be wihtin a launch.sh...
-killall -q polybar
-while pgrep -x polybar >/dev/null;do sleep 1;done
-polybar main &
+#killall -q polybar
+#while pgrep -x polybar >/dev/null;do sleep 1;done
+#polybar main &
 ### FIXME
 
 # start picom

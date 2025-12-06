@@ -11,6 +11,8 @@ alias ls='ls -a --color=auto'
 alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
+alias ip='ip -c'
+
 alias grep='grep -i --color=auto'
 # i for case insensitive
 

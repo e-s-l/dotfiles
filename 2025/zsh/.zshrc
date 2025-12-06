@@ -161,3 +161,9 @@ source ~/perl5/perlbrew/etc/bashrc
 #
 # fix the aliases stuff
 # 
+#
+
+######
+# if runnning bspwm
+# force qt to gtk for icon recognition
+#export QT_PA_PLATFORMTHEME="gtk3"
