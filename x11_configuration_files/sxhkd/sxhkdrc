@@ -34,8 +34,8 @@ super + r
 
 #############################
 # lock screen
-super + shift + l
-	dm-tool switch-to-greeter
+#super + shift + l
+#	dm-tool switch-to-greeter
 #############################
 
 ############
@@ -183,3 +183,19 @@ XF86AudioLowerVolume
 XF86AudioMute
     amixer -q set Master toggle
 
+##################
+# misc. general system (from xfce defaults)
+ctrl + alt + l
+    xflock4
+
+ctrl + alt + Delete
+    xfce4-session-logout
+
+ctrl + shift + Escape
+    xfce4-taskmanager
+
+ctrl + Escape
+    xfdesktop --menu
+
+ctrl + alt + Escape
+    xkill
