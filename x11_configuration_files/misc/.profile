@@ -71,3 +71,4 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export NO_AT_BRIDGE=1 
 
 fi
+. "$HOME/.cargo/env"

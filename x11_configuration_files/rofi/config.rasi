@@ -14,9 +14,12 @@ configuration {
     display-window: "windows";
     drun-display-format: "{icon} {name}";
     show-icons: true;
-    icon-theme: "classic95";
-    font: "Consolas Regular 10, IBMPlexMono Regular 10, Hack Regular 10";
-    modi: [window,run,drun,ssh];
+    icon-theme: "classic95, tango";
+    font: "Inconsolata Regular 12, IBM Plex Mono Regular 12, Hack Regular 12";
+    modi: [window,run,drun];
 }
 
-@theme "./theme.rasi"
+// @theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+@theme "theme/theme.rasi"
+
+

@@ -125,11 +125,14 @@ declare -A programs=(
     ["zsh/.zshrc"]="$HOME/.zshrc" 
     ["zsh/.zprofile"]="$HOME/.zprofile" 
     ["misc/.profile"]="$HOME/.profile" 
+    ["bash/.bashrc"]="$HOME/.bashrc" 
+    ["bash/.bash_profile"]="$HOME/.bash_profile" 
     ["misc/.aliases"]="$HOME/.aliases" 
     ["tmux/.tmux.conf"]="$HOME/.tmux.conf" 
     ["vim/.vimrc"]="$HOME/.vimrc" 
     ["vim/init.vim"]="$config_dir/nvim/init.vim" 
     ["task/taskrc"]="$HOME/.taskrc"
+    ["ghostty/config"]="$config_dir/ghostty/config"
 )
 
 ### FIXME codium on mac defaults to different configuration directory

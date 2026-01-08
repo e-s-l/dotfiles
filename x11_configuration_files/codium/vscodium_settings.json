@@ -4,17 +4,15 @@ live sass compiler
 angular language service
 vscodevim (sometimes)
 */
-
 /*
 favourite themes
 Default High Contrast Light
 */
-
 {
     "workbench.colorTheme": "Default High Contrast Dark",
     "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.cursorStyle":"line",
+    "editor.cursorStyle": "line",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Inconsolata', 'IBMPlexMono'",
     "files.insertFinalNewline": true,
     "files.eol": "\n",
@@ -72,8 +70,7 @@ Default High Contrast Light
     "git.openRepositoryInParentFolders": "never",
     "explorer.confirmDelete": false,
     "editor.lineNumbers": "on",
-    "workbench.iconTheme": "material-icon-theme"
-    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme""editor.formatOnSave": true,
     "prettier.requireConfig": true,
     "eslint.validate": [
         "javascript"

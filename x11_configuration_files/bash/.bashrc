@@ -14,11 +14,9 @@ case $- in
 esac
 
 #############################
-# HISTORY CONFIGURATION
+### HISTORY CONFIGURATION ###
 #############################
 
-# Don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
 
 # Append to the history file, don't overwrite it.
 shopt -s histappend
@@ -26,6 +24,12 @@ shopt -s histappend
 # Set history length (number of commands remembered).
 HISTSIZE=1000
 HISTFILESIZE=2000
+
+HISTCONTROL=ignoreboth:ignoredups:erasedups 
+
+# https://askubuntu.com/questions/339546/how-do-i-see-the-history-of-the-commands-i-have-run-in-tmux 
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 
 ########################
 # WINDOW SIZE SETTINGS
@@ -54,82 +58,20 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-#####################
-# PROMPT CONFIG
-#####################
+###########
+# ALIASES #
+###########
 
-# Set a fancy prompt (non-color, unless we know we "want" color).
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+if [ -f ~/.aliases ]; then     
+    . ~/.aliases 
+fi 
 
-# If this is an xterm, set the title to user@host:dir.
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+######################
+### PROMPT CONFIG. ###
+######################
 
-####################
-# COLOR SUPPORT
-####################
-
-# Enable color support for ls and add handy aliases.
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-##########
-# COLOUR #
-##########
-
-case "$TERM" in
-    rxvt-unicode-256color | screen-256color)
-
-        # Uncomment for a colored prompt, if the terminal has the capability.
-        force_color_prompt=yes
-
-        if [ -n "$force_color_prompt" ]; then
-            if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-                # We have color support.
-                color_prompt=yes
-            else
-                color_prompt=
-            fi
-        fi
-
-        if [ "$color_prompt" = yes ]; then
-            PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\w\[\033[00m\]\$ '
-        else
-            PS1='${debian_chroot:+($debian_chroot)}\w\$ '
-        fi
-
-
-		###################
-		# TMUX AUTO START #
-		###################
-
-      #  if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-      #    exec tmux
-      #  fi
-
-      #  unset color_prompt force_color_prompt
-
-
-        ;;
-    xterm-256color)
-        # No tmux startup in XFCE Terminal (or similar terminals)
-        ;;
-    *)
-        # For other terminal types, don't start tmux
-        ;;
-esac
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" 
 
 
 ####################
@@ -145,13 +87,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
-########
-# perl #
-########
+######################
+### TMUX AUTOSTART ###
+######################
 
-#PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-#PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-#PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-#PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-#PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-source ~/perl5/perlbrew/etc/bashrc
+tmux_autostart=
+
+if [ "$tmux_autostart" = yes ]; then
+    case "$TERM" in     
+        rxvt-unicode-256color | screen-256color)         
+            if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then       
+                exec tmux       
+            fi       
+            ;;     
+        xterm-256color)         
+            # No tmux startup in XFCE Terminal (or similar terminals)         
+            ;;     
+        *)         
+            # For other terminal types, don't start tmux         
+            ;; 
+    esac 
+fi
+. "$HOME/.cargo/env"

@@ -4,7 +4,9 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	ghostty
+
+# formerly urxvt
 
 # program launcher
 #super + @space
@@ -22,15 +24,19 @@ super + Return
 # rofi launcher
 #
 
-super + w
-    rofi -show window
+#super + w
+#    rofi -show window
 
 #super + @space
 super + d
     rofi -show drun
 
-super + r
-    rofi -show run
+# only need this one
+# since in rofi, cna cycle thro'
+# using `shift larr, rarr`
+
+#super + r
+#    rofi -show run
 
 #############################
 # lock screen

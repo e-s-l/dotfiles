@@ -5,7 +5,7 @@
 
 ! Special
 URxvt.foreground: #D3D7CF
-URxvt.background: [85]#1C1C1C
+URxvt.background: [95]#1C1C1C
 URxvt.cursorColor: #D3D7CF
 
 ! black
