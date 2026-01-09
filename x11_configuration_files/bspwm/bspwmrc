@@ -1,0 +1,57 @@
+#! /bin/sh
+
+# set environment for a things that require themes
+export QT_QPA_PLATFORMTHEME="gtk3"
+export QT_STYLE_OVERRIDE="plastique"
+
+# start sxhkd
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# start polybar
+# this should be wihtin a launch.sh...
+# now using with xfce so no polybar...
+#killall -q polybar
+#while pgrep -x polybar >/dev/null;do sleep 1;done
+#polybar main &
+### FIXME
+
+# start picom
+pgrep -x picom > /dev/null || picom --config ~/.config/picom.conf &
+
+# bspwm settings
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         1
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# example of rules:
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Chromium desktop='^2'
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Screenkey manage=off
+# ### TODO
+
+#
+# auto hide polybar and disable sleep when on fullscreen
+# 
+bspc subscribe node_state | while read -r line: do
+    if echo "$line" | grep -q 'fullscreen true': then
+        polybar-msg cmd hide
+        xset -dpms
+        xset s off
+    elif echo "$line" | grep -q 'fullscreen false': then
+        polybar-msg cmd show
+        xset +dpms
+        xset s on
+    fi
+done &
+
+# set background
+hsetroot -solid "#1e1e2e"

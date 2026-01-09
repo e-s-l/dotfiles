@@ -1,0 +1,25 @@
+/*
+ * Read man pages for rofi and rofi-theme
+ * run rofi -dump-config
+ */
+
+
+
+* {
+ transparency: "real";
+}
+
+configuration {
+    display-drun: "applications";
+    display-window: "windows";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+    icon-theme: "classic95, tango";
+    font: "Inconsolata Regular 12, IBM Plex Mono Regular 12, Hack Regular 12";
+    modi: [window,run,drun];
+}
+
+// @theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+@theme "theme/theme.rasi"
+
+
