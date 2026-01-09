@@ -2,10 +2,16 @@
 !! Affect changes:
 !! xrdb ~/.Xresources
 !!
+!! Get list of resources/setting options:
+!! urxvt --help 2>&1 | sed -n '/: /s/^ */! URxvt*/gp'  
+
+URxvt*loginshell: true
+
+! Colours
 
 ! Special
 URxvt.foreground: #D3D7CF
-URxvt.background: [95]#1C1C1C
+URxvt.background: [75]#1C1C1C
 URxvt.cursorColor: #D3D7CF
 
 ! black
@@ -43,15 +49,16 @@ URxvt.color15: #EEEEEC
 ! Font
 
 URxvt.font: \
- xft: Inconsolata Condensed Black:size=12:style=Regular:spacing=Mono:minspace=False:antialias=true, \
+ xft: Inconsolata Black:size=14:style=Regular:spacing=Mono:minspace=False:antialias=true, \
   xft: IBMPlexMono-Regular:size=12:spacing=Mono:minspace=False:antialias=true, \
-    xft: Hack-Regular:size=12:spacing=Mono:minspace=False:antialias=true
+    xft: Hack-Regular:size=13:spacing=Mono:minspace=False:antialias=true
 
 !URxvt.lineSpace: 1
 URxvt.letterSpace: 1
 
 ! Geometry
-URxvt.geometry: 80x24
+URxvt.geometry: 120x36
+!URxvt.geometry: 80x24
 URxvt.internalBorder: 8
 
 ! Cursor behavior
@@ -62,18 +69,30 @@ URxvt.cursorUnderline: false
 URxvt.saveline: 4096
 
 ! Transparency
-!URxvt*transparent: true
+URxvt*transparent: true
 URxvt*shading: 20
 
 ! Blur effect
 URxvt*blurRadius: 3
 
+! Fade on loss of focus
+URxvt*fading: 30
+
 ! Disable scrollbar
+!URxvt*scrollStyle: plain
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 
+! Do not feed 1 line at a time
+URxvt*skipScroll: true
+
 ! Urgency behavior
 !URxvt.urgentOnBell: true
+URxvt*visualBell: true
 
 ! Color depth
 URxvt*depth: 32s
+
+! Disable perl extensions
+URxvt*perl-ext:
+URxvt*perl-ext-common:

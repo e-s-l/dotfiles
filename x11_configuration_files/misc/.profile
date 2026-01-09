@@ -6,8 +6,10 @@
 
 # if using oh-my-zsh then this needs to be moved
 
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+ALIAS_FILE="$HOME/.aliases";
+
+if [[ -f $ALIAS_FILE ]; then
+    . $ALIAS_FILE;
 fi
 
 ########
@@ -71,4 +73,14 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     export NO_AT_BRIDGE=1 
 
 fi
-. "$HOME/.cargo/env"
+
+CARGO_ENV="$HOME/.cargo/env";
+
+if [[ -f $CARGO_ENV ]]; then
+    . "$HOME/.cargo/env";
+fi
+
+
+PS1="[\u@\H \w] \$ "
+ENV=$HOME/.kshrc
+export ENV PS1

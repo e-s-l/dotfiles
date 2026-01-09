@@ -62,7 +62,7 @@ fi
 # ALIASES #
 ###########
 
-if [ -f ~/.aliases ]; then     
+if [[ -f ~/.aliases ]]; then     
     . ~/.aliases 
 fi 
 
@@ -108,4 +108,7 @@ if [ "$tmux_autostart" = yes ]; then
             ;; 
     esac 
 fi
-. "$HOME/.cargo/env"
+
+if [[ -e "$HOME/.cargo/env" ]]; then
+    . "$HOME/.cargo/env";
+fi

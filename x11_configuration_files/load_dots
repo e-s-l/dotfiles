@@ -123,6 +123,7 @@ echo "${prefix} Performing $action..."
 declare -A programs=( 
     ["git/.gitconfig"]="$HOME/.gitconfig" 
     ["zsh/.zshrc"]="$HOME/.zshrc" 
+    ["ksh/.kshrc"]="$HOME/.kshrc" 
     ["zsh/.zprofile"]="$HOME/.zprofile" 
     ["misc/.profile"]="$HOME/.profile" 
     ["bash/.bashrc"]="$HOME/.bashrc" 
@@ -134,6 +135,12 @@ declare -A programs=(
     ["task/taskrc"]="$HOME/.taskrc"
     ["ghostty/config"]="$config_dir/ghostty/config"
 )
+
+# RECALL:
+# the .profile sets the ENV to whichever shell's run control
+# the run controls set aliases, function, environment var's
+# the profile is for user log-ons,
+# the run control is for every shell instance.
 
 ### FIXME codium on mac defaults to different configuration directory
 
