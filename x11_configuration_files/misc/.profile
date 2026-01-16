@@ -3,12 +3,14 @@
 ###############
 # ALIAS DEFNS #
 ###############
+### FIXME
+# this should be in run controls
+# or somewhere, but not in profile
 
 # if using oh-my-zsh then this needs to be moved
-
 ALIAS_FILE="$HOME/.aliases";
 
-if [[ -f $ALIAS_FILE ]; then
+if [[ -f $ALIAS_FILE ]]; then
     . $ALIAS_FILE;
 fi
 
@@ -80,7 +82,6 @@ if [[ -f $CARGO_ENV ]]; then
     . "$HOME/.cargo/env";
 fi
 
-
-PS1="[\u@\H \w] \$ "
-ENV=$HOME/.kshrc
-export ENV PS1
+#PS1="[\u@\H \w] \$ "
+#ENV=$HOME/.kshrc
+#export ENV PS1

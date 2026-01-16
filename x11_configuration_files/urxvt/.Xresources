@@ -49,9 +49,8 @@ URxvt.color15: #EEEEEC
 ! Font
 
 URxvt.font: \
- xft: Inconsolata Black:size=14:style=Regular:spacing=Mono:minspace=False:antialias=true, \
-  xft: IBMPlexMono-Regular:size=12:spacing=Mono:minspace=False:antialias=true, \
-    xft: Hack-Regular:size=13:spacing=Mono:minspace=False:antialias=true
+ xft: IBMPlexMono-Regular:size=11:style=Regular:spacing=Mono:minspace=False:antialias=true, \
+    xft: Hack-Regular:size=12:spacing=Mono:minspace=False:antialias=true
 
 !URxvt.lineSpace: 1
 URxvt.letterSpace: 1
@@ -88,7 +87,7 @@ URxvt*skipScroll: true
 
 ! Urgency behavior
 !URxvt.urgentOnBell: true
-URxvt*visualBell: true
+!URxvt*visualBell: true
 
 ! Color depth
 URxvt*depth: 32s
@@ -96,3 +95,6 @@ URxvt*depth: 32s
 ! Disable perl extensions
 URxvt*perl-ext:
 URxvt*perl-ext-common:
+
+Xcursor.theme: Breeze_Light
+Xcursor.size: 25

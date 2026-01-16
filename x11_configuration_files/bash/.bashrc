@@ -109,6 +109,6 @@ if [ "$tmux_autostart" = yes ]; then
     esac 
 fi
 
-if [[ -e "$HOME/.cargo/env" ]]; then
-    . "$HOME/.cargo/env";
-fi
+#if [[ -e "$HOME/.cargo/env" ]]; then
+#    . "$HOME/.cargo/env";
+#fi
